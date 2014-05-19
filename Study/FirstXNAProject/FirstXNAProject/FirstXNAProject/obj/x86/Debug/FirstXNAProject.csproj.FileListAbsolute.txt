@@ -1,0 +1,8 @@
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\Study\FirstXNAProject\FirstXNAProject\FirstXNAProject\bin\x86\Debug\Content\eTMKAEGTn.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\Study\FirstXNAProject\FirstXNAProject\FirstXNAProject\bin\x86\Debug\FirstXNAProject.exe
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\Study\FirstXNAProject\FirstXNAProject\FirstXNAProject\bin\x86\Debug\FirstXNAProject.pdb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\Study\FirstXNAProject\FirstXNAProject\FirstXNAProject\obj\x86\Debug\FirstXNAProject.csprojResolveAssemblyReference.cache
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\Study\FirstXNAProject\FirstXNAProject\FirstXNAProject\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\Study\FirstXNAProject\FirstXNAProject\FirstXNAProject\obj\x86\Debug\FirstXNAProject.exe
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\Study\FirstXNAProject\FirstXNAProject\FirstXNAProject\obj\x86\Debug\FirstXNAProject.pdb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\Study\FirstXNAProject\FirstXNAProject\FirstXNAProject\bin\x86\Debug\Content\ocean.xnb
