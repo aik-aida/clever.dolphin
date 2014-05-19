@@ -1,0 +1,9 @@
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\StudyFramework\StudyFramework\StudyFramework\bin\x86\Debug\Content\lumba.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\StudyFramework\StudyFramework\StudyFramework\bin\x86\Debug\Content\ocean.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\StudyFramework\StudyFramework\StudyFramework\bin\x86\Debug\StudyFramework.exe
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\StudyFramework\StudyFramework\StudyFramework\bin\x86\Debug\StudyFramework.pdb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\StudyFramework\StudyFramework\StudyFramework\obj\x86\Debug\StudyFramework.csprojResolveAssemblyReference.cache
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\StudyFramework\StudyFramework\StudyFramework\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\StudyFramework\StudyFramework\StudyFramework\obj\x86\Debug\StudyFramework.exe
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\StudyFramework\StudyFramework\StudyFramework\obj\x86\Debug\StudyFramework.pdb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\StudyFramework\StudyFramework\StudyFramework\bin\x86\Debug\Content\ocean_sea_waves_vector.xnb
