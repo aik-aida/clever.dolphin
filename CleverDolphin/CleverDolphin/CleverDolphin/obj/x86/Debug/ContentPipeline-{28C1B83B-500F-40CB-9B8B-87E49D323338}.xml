@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>lumba.png</Source>
+      <Name>lumba</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\lumba.xnb</Output>
+      <Time>2014-05-19T21:31:27.7247484+07:00</Time>
+    </Item>
+    <Item>
+      <Source>ocean_sea_waves_vector.jpg</Source>
+      <Name>ocean_sea_waves_vector</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\ocean_sea_waves_vector.xnb</Output>
+      <Time>2014-05-19T21:31:27.7247484+07:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{28C1B83B-500F-40CB-9B8B-87E49D323338}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphinContent\</RootDirectory>
+      <LoggerRootDirectory>E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\</LoggerRootDirectory>
+      <IntermediateDirectory>E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-04-22T14:53:25.9995657+07:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
