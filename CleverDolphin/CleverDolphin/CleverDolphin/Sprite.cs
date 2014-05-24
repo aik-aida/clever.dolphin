@@ -10,12 +10,13 @@ namespace CleverDolphin
     class Sprite
     {
         protected Texture2D myTexture;
-        protected Rectangle myRectangle;
-
+        public Rectangle myRectangle;
+       
         public Sprite(Texture2D myTexture)
         {
             this.myTexture = myTexture;
         }
+
 
         public Sprite(Texture2D myTexture, Rectangle myRectangle)
         {

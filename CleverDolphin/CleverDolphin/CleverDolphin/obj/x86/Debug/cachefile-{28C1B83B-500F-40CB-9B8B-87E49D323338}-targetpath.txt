@@ -1,2 +1,8 @@
 Content\lumba.xnb
 Content\ocean_sea_waves_vector.xnb
+Content\awan copy2.xnb
+Content\coin.xnb
+Content\awan copy.xnb
+Content\seapolos1.xnb
+Content\seapolos2.xnb
+Content\SEANEW.xnb

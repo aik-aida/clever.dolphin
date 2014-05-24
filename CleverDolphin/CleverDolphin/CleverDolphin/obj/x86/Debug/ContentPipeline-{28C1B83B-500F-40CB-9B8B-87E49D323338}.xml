@@ -19,6 +19,60 @@
       <Output>E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\ocean_sea_waves_vector.xnb</Output>
       <Time>2014-05-19T21:31:27.7247484+07:00</Time>
     </Item>
+    <Item>
+      <Source>awan copy2.png</Source>
+      <Name>awan copy2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy2.xnb</Output>
+      <Time>2014-05-24T21:56:05.6366375+07:00</Time>
+    </Item>
+    <Item>
+      <Source>coin.png</Source>
+      <Name>coin</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\coin.xnb</Output>
+      <Time>2014-05-24T21:43:13.2454593+07:00</Time>
+    </Item>
+    <Item>
+      <Source>awan copy.png</Source>
+      <Name>awan copy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy.xnb</Output>
+      <Time>2014-05-24T21:56:04.10655+07:00</Time>
+    </Item>
+    <Item>
+      <Source>seapolos1.png</Source>
+      <Name>seapolos1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\seapolos1.xnb</Output>
+      <Time>2014-05-24T22:02:33.2908101+07:00</Time>
+    </Item>
+    <Item>
+      <Source>seapolos2.png</Source>
+      <Name>seapolos2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\seapolos2.xnb</Output>
+      <Time>2014-05-24T22:02:33.2938103+07:00</Time>
+    </Item>
+    <Item>
+      <Source>SEANEW.png</Source>
+      <Name>SEANEW</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\SEANEW.xnb</Output>
+      <Time>2014-05-24T22:31:59.4008258+07:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{28C1B83B-500F-40CB-9B8B-87E49D323338}</ContentProjectGUID>

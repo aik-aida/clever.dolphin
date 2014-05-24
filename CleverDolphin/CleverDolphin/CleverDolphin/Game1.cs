@@ -20,12 +20,18 @@ namespace CleverDolphin
         SpriteBatch spriteBatch;
         Sprite dolphin;
         Sprite ocean;
+        Sprite sky;
+        int height;
+        int width;
         public Game1()
         {
+            height = 720;
+            width = 1280;
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferHeight = 720;
-            graphics.PreferredBackBufferWidth = 1280;
+            graphics.PreferredBackBufferHeight = height;
+            graphics.PreferredBackBufferWidth = width;
+            graphics.IsFullScreen = true;
             
         }
 
@@ -50,8 +56,9 @@ namespace CleverDolphin
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            dolphin = new Dolphin(Content.Load<Texture2D>("lumba"));
-            ocean = new Ocean(Content.Load<Texture2D>("ocean_sea_waves_vector"));
+            dolphin = new Dolphin(Content.Load<Texture2D>("lumba"), height);
+            sky = new Sky(Content.Load<Texture2D>("awan copy"), Content.Load<Texture2D>("awan copy2"),width,380);
+            ocean = new Ocean(Content.Load<Texture2D>("SEANEW"), Content.Load<Texture2D>("SEANEW"),width, height);
             // TODO: use this.Content to load your game content here
         }
 
@@ -76,6 +83,8 @@ namespace CleverDolphin
                 this.Exit();
 
             dolphin.Update(gameTime);
+            
+            sky.Update(gameTime);
             ocean.Update(gameTime);
             // TODO: Add your update logic here
 
@@ -90,6 +99,8 @@ namespace CleverDolphin
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
+
+            sky.Draw(spriteBatch);
             ocean.Draw(spriteBatch);
             dolphin.Draw(spriteBatch);
             spriteBatch.End();
