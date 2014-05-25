@@ -34,8 +34,6 @@ namespace CleverDolphin
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(myTexture, myRectangle, Color.White);
-
-            //base.Draw(gameTime);
         }
 
         public override void Update(GameTime gameTime)

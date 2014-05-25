@@ -21,6 +21,7 @@ namespace CleverDolphin
         Sprite dolphin;
         Sprite ocean;
         Sprite sky;
+        Sprite coin;
         int height;
         int width;
         public Game1()
@@ -31,7 +32,7 @@ namespace CleverDolphin
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = height;
             graphics.PreferredBackBufferWidth = width;
-            graphics.IsFullScreen = true;
+            //graphics.IsFullScreen = true;
             
         }
 
@@ -56,9 +57,10 @@ namespace CleverDolphin
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            dolphin = new Dolphin(Content.Load<Texture2D>("lumba"), height);
+            dolphin = new Dolphin(Content.Load<Texture2D>("clever1"), height);
             sky = new Sky(Content.Load<Texture2D>("awan copy"), Content.Load<Texture2D>("awan copy2"),width,380);
             ocean = new Ocean(Content.Load<Texture2D>("SEANEW"), Content.Load<Texture2D>("SEANEW"),width, height);
+            coin = new Coin(Content.Load<Texture2D>("coin"), height);
             // TODO: use this.Content to load your game content here
         }
 
@@ -86,6 +88,7 @@ namespace CleverDolphin
             
             sky.Update(gameTime);
             ocean.Update(gameTime);
+            coin.Update(gameTime);
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -103,6 +106,8 @@ namespace CleverDolphin
             sky.Draw(spriteBatch);
             ocean.Draw(spriteBatch);
             dolphin.Draw(spriteBatch);
+            coin.Draw(spriteBatch);
+
             spriteBatch.End();
             // TODO: Add your drawing code here
 
