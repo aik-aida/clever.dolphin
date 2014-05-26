@@ -82,6 +82,15 @@
       <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\clever1.xnb</Output>
       <Time>2014-05-25T11:06:53.4157544+07:00</Time>
     </Item>
+    <Item>
+      <Source>SpriteFont1.spritefont</Source>
+      <Name>SpriteFont1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2014-05-26T11:56:02.3772481+07:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{28C1B83B-500F-40CB-9B8B-87E49D323338}</ContentProjectGUID>

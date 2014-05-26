@@ -17,26 +17,47 @@ namespace CleverDolphin
     /// </summary>
     class Coin : Sprite
     {
-        Rectangle coinA;
-        Rectangle coinB;
-        Rectangle coinC;
-        //Texture2D texture2d;
-        int height;
-        int delay;
-        //float delay;
-        //float elapsed;
-        //float keyboardFreeze;
-        //int speed;
+        //Rectangle coinA;
+        //Rectangle coinB;
+        //Rectangle coinC;
+        //Rectangle rec;
+        
+        //int height;
 
-        public Coin(Texture2D textureCoin, int maxY)
+        public Coin(Texture2D textureCoin, int id, int row)
             : base(textureCoin)
         {
-            this.delay = 0;
-            this.height = maxY;
-            //myRectangle = new Rectangle(300, 330, 60, 60);
-            coinA = new Rectangle(2000, 340, 60, 60);
-            coinB = new Rectangle(1900, 490, 60, 60);
-            coinC = new Rectangle(2000, 630, 60, 60);
+            //this.delay = 0;
+            //this.height = maxY;
+            /*
+            coinA = new Rectangle(1500, 350, 50, 50);
+            coinB = new Rectangle(1450, 500, 50, 50);
+            coinC = new Rectangle(1400, 650, 50, 50);
+             */
+
+            int datar=0;
+            int tinggi=0;
+            switch (id)
+            {
+                case 1: datar = 1500; break;
+                case 2: datar = 1450; break;
+                case 3: datar = 1400; break;
+            }
+            switch (row)
+            {
+                case 1: tinggi = 350; break;
+                case 2: tinggi = 500; break;
+                case 3: tinggi = 650; break;
+            }
+
+            /*
+            case 1: myRectangle = new Rectangle(1500, 350, 50, 50); break;
+            case 2: myRectangle = new Rectangle(1450, 500, 50, 50); break;
+            case 3: myRectangle = new Rectangle(1400, 650, 50, 50); break;
+             */
+
+            myRectangle = new Rectangle(datar, tinggi, 50, 50);
+
 
         }
 
@@ -46,10 +67,12 @@ namespace CleverDolphin
         /// </summary>
         public override void Draw(SpriteBatch spriteBatch)
         {
-            //spriteBatch.Draw(myTexture, myRectangle, Color.White);
+            spriteBatch.Draw(myTexture, myRectangle, Color.White);
+            /*
             spriteBatch.Draw(myTexture, coinA, Color.White);
             spriteBatch.Draw(myTexture, coinB, Color.White);
             spriteBatch.Draw(myTexture, coinC, Color.White);
+             */
         }
 
 
@@ -59,23 +82,13 @@ namespace CleverDolphin
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public override void Update(GameTime gameTime)
         {
-            //delay = 100;
-            //speed = 30;
+            myRectangle.X -= 2;
+            /*
             coinA.X -= 2;
             coinB.X -= 2;
             coinC.X -= 2;
-            //keyboardFreeze += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+             */
 
-           /*
-                elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-                if (elapsed <= delay)
-                    myRectangle.Y += speed;
-                else
-                {
-                    keyboardFreeze = 0;
-                    elapsed = 0;
-                }
-            */
         }
     }
 }

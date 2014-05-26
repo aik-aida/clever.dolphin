@@ -21,27 +21,31 @@ namespace CleverDolphin
         Sprite dolphin;
         Sprite ocean;
         Sprite sky;
-        Sprite coin;
+        List<Sprite> listCoin;
+
+        SpriteFont score;
+        Vector2 font1;
+        int sc;
+
         int height;
         int width;
+        int delay;
         public Game1()
         {
+            delay = 300;
             height = 720;
             width = 1280;
+            sc = 0;
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = height;
             graphics.PreferredBackBufferWidth = width;
+            listCoin = new List<Sprite>();
+            
             //graphics.IsFullScreen = true;
             
         }
 
-        /// <summary>
-        /// Allows the game to perform any initialization it needs to before starting to run.
-        /// This is where it can query for any required services and load any non-graphic
-        /// related content.  Calling base.Initialize will enumerate through any components
-        /// and initialize them as well.
-        /// </summary>
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
@@ -49,10 +53,7 @@ namespace CleverDolphin
             base.Initialize();
         }
 
-        /// <summary>
-        /// LoadContent will be called once per game and is the place to load
-        /// all of your content.
-        /// </summary>
+   
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
@@ -60,27 +61,29 @@ namespace CleverDolphin
             dolphin = new Dolphin(Content.Load<Texture2D>("clever1"), height);
             sky = new Sky(Content.Load<Texture2D>("awan copy"), Content.Load<Texture2D>("awan copy2"),width,380);
             ocean = new Ocean(Content.Load<Texture2D>("SEANEW"), Content.Load<Texture2D>("SEANEW"),width, height);
-            coin = new Coin(Content.Load<Texture2D>("coin"), height);
-            // TODO: use this.Content to load your game content here
+
+            score = Content.Load<SpriteFont>("SpriteFont1");
+            font1 = new Vector2(1100, 0);
+            
+            //coin = new Coin(Content.Load<Texture2D>("coin"), height);
+            
+            for (int i = 1; i <= 3; i++)
+            {
+                Random r = new Random();
+                int a = r.Next(1, 4);
+                Console.WriteLine(a);
+                listCoin.Add(new Coin(Content.Load<Texture2D>("coin"), a, i));
+            }
+            
         }
 
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// all content.
-        /// </summary>
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
         }
 
-        /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
@@ -88,16 +91,39 @@ namespace CleverDolphin
             
             sky.Update(gameTime);
             ocean.Update(gameTime);
-            coin.Update(gameTime);
-            // TODO: Add your update logic here
+
+            
+            /*
+            if (delay <= 301)
+                delay += 10;
+            else
+                delay = 0;
+            
+            Console.WriteLine(delay);
+
+            if (delay == 300)
+            {*/
+            int a = 1;
+                foreach (Sprite sp in listCoin)
+                {
+                    sp.Update(gameTime);
+                    a++;
+                }
+            //}
+
+           
+                Console.WriteLine(a);
+
+                if (a >= 3)
+                {
+                    Console.WriteLine("masuk collision");
+                    Collision();
+                }
 
             base.Update(gameTime);
         }
 
-        /// <summary>
-        /// This is called when the game should draw itself.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
@@ -106,12 +132,49 @@ namespace CleverDolphin
             sky.Draw(spriteBatch);
             ocean.Draw(spriteBatch);
             dolphin.Draw(spriteBatch);
-            coin.Draw(spriteBatch);
 
+            /*
+            if (delay == 300)
+            {
+                Console.WriteLine("lalala");*/
+                foreach (Sprite sp in listCoin)
+                {
+                    sp.Draw(spriteBatch);
+                    Console.WriteLine("gambar coin");
+                }
+            //}
+
+            spriteBatch.DrawString(score, sc.ToString(), font1, Color.Black);
             spriteBatch.End();
-            // TODO: Add your drawing code here
+            
 
             base.Draw(gameTime);
+        }
+
+        private void Collision()
+        {
+            Sprite toRemove = null;
+
+            foreach (Sprite sp in listCoin)
+            {
+                /*
+                if (dolphin.BoundingBox.Intersects(sp.BoundingBox))
+                {
+                    Console.WriteLine("tabrak");
+                    toRemove = sp;
+                    break;
+                }*/
+                if (dolphin.myRectangle.Intersects(sp.myRectangle))
+                {
+                    Console.WriteLine("tabrak");
+                    toRemove = sp;
+                    sc += 100;
+                    break;
+                }
+            }
+
+            if (toRemove!=null)
+                listCoin.Remove(toRemove);
         }
     }
 }

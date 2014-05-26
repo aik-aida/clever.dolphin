@@ -36,5 +36,12 @@ namespace CleverDolphin
         {
 
         }
+
+        public Rectangle BoundingBox
+        {
+            get { return new Rectangle((int)myRectangle.X, (int)myRectangle.Y, myTexture.Width, myTexture.Height); }
+        }
+
+
     }
 }
