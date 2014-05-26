@@ -61,7 +61,7 @@ namespace CleverDolphin
             
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            dolphin = new Dolphin(Content.Load<Texture2D>("si lumba lumba"), playerPosition, 140 ,240, height);
+            dolphin = new Dolphin(Content.Load<Texture2D>("lmb"), playerPosition, 180 ,320, height);
             sky = new Sky(Content.Load<Texture2D>("awan copy"), Content.Load<Texture2D>("awan copy2"),width,380);
             ocean = new Ocean(Content.Load<Texture2D>("SEANEW"), Content.Load<Texture2D>("SEANEW"),width, height);
             score = Content.Load<SpriteFont>("SpriteFont1");

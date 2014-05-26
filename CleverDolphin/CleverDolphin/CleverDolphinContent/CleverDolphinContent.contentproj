@@ -96,8 +96,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="si lumba lumba.png">
-      <Name>si lumba lumba</Name>
+    <Compile Include="lmb.png">
+      <Name>lmb</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

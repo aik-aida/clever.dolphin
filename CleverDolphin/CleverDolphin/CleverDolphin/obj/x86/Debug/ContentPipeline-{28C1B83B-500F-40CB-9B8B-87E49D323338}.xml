@@ -92,13 +92,13 @@
       <Time>2014-05-26T19:44:32.3540308+07:00</Time>
     </Item>
     <Item>
-      <Source>si lumba lumba.png</Source>
-      <Name>si lumba lumba</Name>
+      <Source>lmb.png</Source>
+      <Name>lmb</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si lumba lumba.xnb</Output>
-      <Time>2014-05-26T23:00:19.5729332+07:00</Time>
+      <Output>E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\lmb.xnb</Output>
+      <Time>2014-05-26T23:42:23.1177513+07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
