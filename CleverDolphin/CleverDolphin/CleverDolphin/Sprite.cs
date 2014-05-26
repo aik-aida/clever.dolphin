@@ -10,8 +10,9 @@ namespace CleverDolphin
     class Sprite
     {
         protected Texture2D myTexture;
-        public Rectangle myRectangle;
-       
+        public Rectangle destRectangle;
+        public Rectangle sourcRectangle;
+        
         public Sprite(Texture2D myTexture)
         {
             this.myTexture = myTexture;
@@ -22,13 +23,14 @@ namespace CleverDolphin
         {
 
             this.myTexture = myTexture;
-            this.myRectangle = myRectangle;
+            this.destRectangle = myRectangle;
         }
 
+        
         public virtual void Draw(SpriteBatch spriteBatch)
         {
 
-            spriteBatch.Draw(myTexture, myRectangle, Color.White);
+            spriteBatch.Draw(myTexture, destRectangle, Color.White);
 
         }
 
@@ -39,7 +41,7 @@ namespace CleverDolphin
 
         public Rectangle BoundingBox
         {
-            get { return new Rectangle((int)myRectangle.X, (int)myRectangle.Y, myTexture.Width, myTexture.Height); }
+            get { return new Rectangle((int)destRectangle.X, (int)destRectangle.Y, myTexture.Width, myTexture.Height); }
         }
 
 

@@ -1,2 +1,1 @@
-E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphinContent\obj\x86\Debug\CleverDolphinContent.contentprojResolveAssemblyReference.cache
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphinContent\obj\x86\Debug\CleverDolphinContent.contentprojResolveAssemblyReference.cache

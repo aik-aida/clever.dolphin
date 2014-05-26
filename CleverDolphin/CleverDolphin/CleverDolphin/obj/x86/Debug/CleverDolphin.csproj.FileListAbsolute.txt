@@ -27,3 +27,6 @@ C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolph
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.pdb
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\clever1.xnb
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\SpriteFont1.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\clever1.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\SpriteFont1.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si lumba lumba.xnb

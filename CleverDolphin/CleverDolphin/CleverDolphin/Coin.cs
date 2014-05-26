@@ -56,7 +56,7 @@ namespace CleverDolphin
             case 3: myRectangle = new Rectangle(1400, 650, 50, 50); break;
              */
 
-            myRectangle = new Rectangle(datar, tinggi, 50, 50);
+            destRectangle = new Rectangle(datar, tinggi, 50, 50);
 
 
         }
@@ -67,7 +67,7 @@ namespace CleverDolphin
         /// </summary>
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(myTexture, myRectangle, Color.White);
+            spriteBatch.Draw(myTexture, destRectangle, Color.White);
             /*
             spriteBatch.Draw(myTexture, coinA, Color.White);
             spriteBatch.Draw(myTexture, coinB, Color.White);
@@ -82,7 +82,7 @@ namespace CleverDolphin
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public override void Update(GameTime gameTime)
         {
-            myRectangle.X -= 2;
+            destRectangle.X -= 2;
             /*
             coinA.X -= 2;
             coinB.X -= 2;

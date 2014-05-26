@@ -12,12 +12,12 @@ namespace CleverDolphin
         public Obstacle(Texture2D obsTextr)
             : base(obsTextr)
         {
-            myRectangle = new Rectangle(1000,300,50,50);
+            destRectangle = new Rectangle(1000,300,50,50);
         }
 
         public override void Update(GameTime gameTime)
         {
-            myRectangle.X -= 3;
+            destRectangle.X -= 3;
         }
 
         

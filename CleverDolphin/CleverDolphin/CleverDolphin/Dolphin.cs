@@ -17,27 +17,25 @@ namespace CleverDolphin
         int maxHeight;
         int moveDown = 0;
         int moveUp = 0;
+        public Vector2 Position;
         float keyboardFreeze;
-
-        public Dolphin(Texture2D dolphinTextr, int maxHeight)
+        Animation dolphinAnimation;
+        
+        public Dolphin(Texture2D dolphinTextr, Vector2 position, int width, int height,int maxHeight)
             : base(dolphinTextr)
         {
+            Position = position;
+            dolphinAnimation = new Animation();
             this.maxHeight = maxHeight;
-            myRectangle = new Rectangle(35, 330, 120, 60);
-        }
-        public Dolphin(Texture2D dolphinTextr, Rectangle dolphinRect, int maxHeight)
-            : base(dolphinTextr, dolphinRect)
-        {
-            this.maxHeight = maxHeight;
+            destRectangle = new Rectangle((int)Position.X, (int)Position.Y, width, height/4);
+            sourcRectangle = new Rectangle(0, 0, width, height / 4);
+            dolphinAnimation.Initialize(3, 100, width, height / 4);
         }
 
-        public override void Draw(SpriteBatch spriteBatch)
+        
+        public void UpdateMovement(GameTime gameTime)
         {
-            spriteBatch.Draw(myTexture, myRectangle, Color.White);
-        }
-
-        public override void Update(GameTime gameTime)
-        {
+            sourcRectangle = dolphinAnimation.Animate(gameTime);
             delay = 100;
             speed = 30;
             keyboardFreeze += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
@@ -46,7 +44,7 @@ namespace CleverDolphin
             {
                 elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
                 if (elapsed <= delay)
-                    myRectangle.Y += speed;
+                    destRectangle.Y += speed;
                 else
                 {
                     keyboardFreeze = 0;
@@ -59,7 +57,7 @@ namespace CleverDolphin
             {
                 elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
                 if (elapsed <= delay)
-                    myRectangle.Y -= speed;
+                    destRectangle.Y -= speed;
                 else
                 {
                     keyboardFreeze = 0;
@@ -69,18 +67,27 @@ namespace CleverDolphin
             }
 
             movement = Keyboard.GetState();
-            if (movement.IsKeyDown(Keys.Down) && keyboardFreeze >= delay && myRectangle.Y + 200 < maxHeight)
+            if (movement.IsKeyDown(Keys.Down) && keyboardFreeze >= delay && destRectangle.Y + 200 < maxHeight)
             {
                 keyboardFreeze = 0;
                 moveDown = 1;
             }
 
-            if (movement.IsKeyDown(Keys.Up) && keyboardFreeze >= delay && myRectangle.Y - 200 > (maxHeight/3))
+            if (movement.IsKeyDown(Keys.Up) && keyboardFreeze >= delay && destRectangle.Y - 200 > (maxHeight / 3))
             {
                 keyboardFreeze = 0;
                 moveUp = 1;
             }
             //base.Update(gameTime);
+             
         }
+
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+           // DolphinAnimation.Draw(spriteBatch);
+            spriteBatch.Draw(myTexture, destRectangle, sourcRectangle, Color.White);
+        }
+
+        
     }
 }

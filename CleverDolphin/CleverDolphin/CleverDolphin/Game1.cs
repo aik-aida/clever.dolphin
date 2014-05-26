@@ -18,9 +18,10 @@ namespace CleverDolphin
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Sprite dolphin;
+        Dolphin dolphin;
         Sprite ocean;
         Sprite sky;
+        Vector2 playerPosition;
         List<Sprite> listCoin;
 
         SpriteFont score;
@@ -35,6 +36,7 @@ namespace CleverDolphin
             delay = 300;
             height = 720;
             width = 1280;
+            playerPosition = new Vector2(35, 330);
             sc = 0;
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -42,7 +44,7 @@ namespace CleverDolphin
             graphics.PreferredBackBufferWidth = width;
             listCoin = new List<Sprite>();
             
-            //graphics.IsFullScreen = true;
+            graphics.IsFullScreen = true;
             
         }
 
@@ -56,15 +58,15 @@ namespace CleverDolphin
    
         protected override void LoadContent()
         {
+            
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            dolphin = new Dolphin(Content.Load<Texture2D>("clever1"), height);
+            dolphin = new Dolphin(Content.Load<Texture2D>("si lumba lumba"), playerPosition, 140 ,240, height);
             sky = new Sky(Content.Load<Texture2D>("awan copy"), Content.Load<Texture2D>("awan copy2"),width,380);
             ocean = new Ocean(Content.Load<Texture2D>("SEANEW"), Content.Load<Texture2D>("SEANEW"),width, height);
-
             score = Content.Load<SpriteFont>("SpriteFont1");
             font1 = new Vector2(1100, 0);
-            
+
             //coin = new Coin(Content.Load<Texture2D>("coin"), height);
             
             for (int i = 1; i <= 3; i++)
@@ -87,8 +89,7 @@ namespace CleverDolphin
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            dolphin.Update(gameTime);
-            
+            dolphin.UpdateMovement(gameTime);
             sky.Update(gameTime);
             ocean.Update(gameTime);
 
@@ -132,7 +133,7 @@ namespace CleverDolphin
             sky.Draw(spriteBatch);
             ocean.Draw(spriteBatch);
             dolphin.Draw(spriteBatch);
-
+            //spriteBatch.Draw(Content.Load<Texture2D>("clever1"), new Rectangle(100, 100, 120, 60), new Rectangle(0, 0, 1000, 600), Color.White);
             /*
             if (delay == 300)
             {
@@ -150,7 +151,7 @@ namespace CleverDolphin
 
             base.Draw(gameTime);
         }
-
+         
         private void Collision()
         {
             Sprite toRemove = null;
@@ -164,7 +165,7 @@ namespace CleverDolphin
                     toRemove = sp;
                     break;
                 }*/
-                if (dolphin.myRectangle.Intersects(sp.myRectangle))
+                if (dolphin.destRectangle.Intersects(sp.destRectangle))
                 {
                     Console.WriteLine("tabrak");
                     toRemove = sp;
