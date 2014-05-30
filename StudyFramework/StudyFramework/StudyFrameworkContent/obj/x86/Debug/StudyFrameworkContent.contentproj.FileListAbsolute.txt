@@ -1,2 +1,0 @@
-E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Final Project\StudyFramework\StudyFramework\StudyFrameworkContent\obj\x86\Debug\StudyFrameworkContent.contentprojResolveAssemblyReference.cache
-C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\StudyFramework\StudyFramework\StudyFrameworkContent\obj\x86\Debug\StudyFrameworkContent.contentprojResolveAssemblyReference.cache
