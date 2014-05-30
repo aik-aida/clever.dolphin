@@ -28,6 +28,10 @@ namespace CleverDolphin
         Vector2 font1;
         int sc;
 
+        TimeSpan newTimeCoin;
+        TimeSpan prevTimeCoin;
+        Random rand;
+
         int height;
         int width;
         int delay;
@@ -42,15 +46,17 @@ namespace CleverDolphin
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = height;
             graphics.PreferredBackBufferWidth = width;
-            listCoin = new List<Sprite>();
-            
-            graphics.IsFullScreen = true;
+           //graphics.IsFullScreen = true;
             
         }
 
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            listCoin = new List<Sprite>();
+            prevTimeCoin = TimeSpan.Zero;
+            newTimeCoin = TimeSpan.FromSeconds(15.0);
+            rand = new Random();
 
             base.Initialize();
         }
@@ -67,15 +73,7 @@ namespace CleverDolphin
             score = Content.Load<SpriteFont>("SpriteFont1");
             font1 = new Vector2(1100, 0);
 
-            //coin = new Coin(Content.Load<Texture2D>("coin"), height);
-            
-            for (int i = 1; i <= 3; i++)
-            {
-                Random r = new Random();
-                int a = r.Next(1, 4);
-                Console.WriteLine(a);
-                listCoin.Add(new Coin(Content.Load<Texture2D>("coin"), a, i));
-            }
+            AddChoise();
             
         }
 
@@ -93,33 +91,7 @@ namespace CleverDolphin
             sky.Update(gameTime);
             ocean.Update(gameTime);
 
-            
-            /*
-            if (delay <= 301)
-                delay += 10;
-            else
-                delay = 0;
-            
-            Console.WriteLine(delay);
-
-            if (delay == 300)
-            {*/
-            int a = 1;
-                foreach (Sprite sp in listCoin)
-                {
-                    sp.Update(gameTime);
-                    a++;
-                }
-            //}
-
-           
-                Console.WriteLine(a);
-
-                if (a >= 3)
-                {
-                    Console.WriteLine("masuk collision");
-                    Collision();
-                }
+            UpdateChoise(gameTime);
 
             base.Update(gameTime);
         }
@@ -133,18 +105,15 @@ namespace CleverDolphin
             sky.Draw(spriteBatch);
             ocean.Draw(spriteBatch);
             dolphin.Draw(spriteBatch);
-            //spriteBatch.Draw(Content.Load<Texture2D>("clever1"), new Rectangle(100, 100, 120, 60), new Rectangle(0, 0, 1000, 600), Color.White);
-            /*
-            if (delay == 300)
-            {
-                Console.WriteLine("lalala");*/
-                foreach (Sprite sp in listCoin)
-                {
-                    sp.Draw(spriteBatch);
-                    Console.WriteLine("gambar coin");
-                }
-            //}
 
+            //menampilkan list coin
+            foreach (Sprite sp in listCoin)
+            {
+                sp.Draw(spriteBatch);
+                Console.WriteLine("gambar coin");
+            }
+
+            //menampilkan font score coin
             spriteBatch.DrawString(score, sc.ToString(), font1, Color.Black);
             spriteBatch.End();
             
@@ -152,22 +121,14 @@ namespace CleverDolphin
             base.Draw(gameTime);
         }
          
-        private void Collision()
+        private void CollisionChoise()
         {
             Sprite toRemove = null;
 
             foreach (Sprite sp in listCoin)
             {
-                /*
-                if (dolphin.BoundingBox.Intersects(sp.BoundingBox))
-                {
-                    Console.WriteLine("tabrak");
-                    toRemove = sp;
-                    break;
-                }*/
                 if (dolphin.destRectangle.Intersects(sp.destRectangle))
                 {
-                    Console.WriteLine("tabrak");
                     toRemove = sp;
                     sc += 100;
                     break;
@@ -176,6 +137,33 @@ namespace CleverDolphin
 
             if (toRemove!=null)
                 listCoin.Remove(toRemove);
+        }
+
+        private void AddChoise()
+        {
+            for (int i = 1; i <= 3; i++)
+            {
+                Random r = new Random();
+                int a = r.Next(1, 4);
+                Console.WriteLine(a);
+                listCoin.Add(new Coin(Content.Load<Texture2D>("coin"), a, i));
+            }
+        }
+
+        private void UpdateChoise(GameTime gameTime)
+        {
+            if (gameTime.TotalGameTime - prevTimeCoin > newTimeCoin)
+            {
+                prevTimeCoin = gameTime.TotalGameTime;
+                listCoin.Clear();
+                AddChoise();
+            }
+
+            foreach (Sprite sp in listCoin)
+            {
+                sp.Update(gameTime);
+            }
+            CollisionChoise();
         }
     }
 }

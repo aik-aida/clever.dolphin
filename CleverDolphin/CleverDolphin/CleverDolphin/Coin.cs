@@ -24,6 +24,8 @@ namespace CleverDolphin
         
         //int height;
 
+        List<Sprite>choise;
+
         public Coin(Texture2D textureCoin, int id, int row)
             : base(textureCoin)
         {
