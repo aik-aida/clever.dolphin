@@ -2,21 +2,12 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>lumba.png</Source>
-      <Name>lumba</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\lumba.xnb</Output>
-      <Time>2014-05-25T00:47:27.3161282+07:00</Time>
-    </Item>
-    <Item>
       <Source>ocean_sea_waves_vector.jpg</Source>
       <Name>ocean_sea_waves_vector</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\ocean_sea_waves_vector.xnb</Output>
+      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\ocean_sea_waves_vector.xnb</Output>
       <Time>2014-05-25T00:47:27.3931792+07:00</Time>
     </Item>
     <Item>
@@ -25,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy2.xnb</Output>
+      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy2.xnb</Output>
       <Time>2014-05-25T00:47:27.2090584+07:00</Time>
     </Item>
     <Item>
@@ -34,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\coin.xnb</Output>
+      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\coin.xnb</Output>
       <Time>2014-05-25T00:47:27.2390784+07:00</Time>
     </Item>
     <Item>
@@ -43,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy.xnb</Output>
+      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy.xnb</Output>
       <Time>2014-05-25T00:47:27.2070571+07:00</Time>
     </Item>
     <Item>
@@ -52,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\seapolos1.xnb</Output>
+      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\seapolos1.xnb</Output>
       <Time>2014-05-25T00:47:27.3961815+07:00</Time>
     </Item>
     <Item>
@@ -61,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\seapolos2.xnb</Output>
+      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\seapolos2.xnb</Output>
       <Time>2014-05-25T00:47:27.3991838+07:00</Time>
     </Item>
     <Item>
@@ -70,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\SEANEW.xnb</Output>
+      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\SEANEW.xnb</Output>
       <Time>2014-05-25T00:47:27.1920468+07:00</Time>
     </Item>
     <Item>
@@ -79,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\clever1.xnb</Output>
+      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\clever1.xnb</Output>
       <Time>2014-05-25T11:06:53.4157544+07:00</Time>
     </Item>
     <Item>
@@ -88,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si lumba lumba.xnb</Output>
+      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si lumba lumba.xnb</Output>
       <Time>2014-05-26T23:27:26.0142405+07:00</Time>
     </Item>
     <Item>
@@ -97,7 +88,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
       <Time>2014-05-26T11:56:02.3772481+07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -107,10 +98,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphinContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphinContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

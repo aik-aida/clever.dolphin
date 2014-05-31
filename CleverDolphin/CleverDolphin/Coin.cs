@@ -17,25 +17,10 @@ namespace CleverDolphin
     /// </summary>
     class Coin : Sprite
     {
-        //Rectangle coinA;
-        //Rectangle coinB;
-        //Rectangle coinC;
-        //Rectangle rec;
-        
-        //int height;
-
-        List<Sprite>choise;
 
         public Coin(Texture2D textureCoin, int id, int row)
             : base(textureCoin)
         {
-            //this.delay = 0;
-            //this.height = maxY;
-            /*
-            coinA = new Rectangle(1500, 350, 50, 50);
-            coinB = new Rectangle(1450, 500, 50, 50);
-            coinC = new Rectangle(1400, 650, 50, 50);
-             */
 
             int datar=0;
             int tinggi=0;
@@ -52,12 +37,7 @@ namespace CleverDolphin
                 case 3: tinggi = 650; break;
             }
 
-            /*
-            case 1: myRectangle = new Rectangle(1500, 350, 50, 50); break;
-            case 2: myRectangle = new Rectangle(1450, 500, 50, 50); break;
-            case 3: myRectangle = new Rectangle(1400, 650, 50, 50); break;
-             */
-
+           
             destRectangle = new Rectangle(datar, tinggi, 50, 50);
 
 
@@ -70,11 +50,7 @@ namespace CleverDolphin
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(myTexture, destRectangle, Color.White);
-            /*
-            spriteBatch.Draw(myTexture, coinA, Color.White);
-            spriteBatch.Draw(myTexture, coinB, Color.White);
-            spriteBatch.Draw(myTexture, coinC, Color.White);
-             */
+
         }
 
 
@@ -85,12 +61,7 @@ namespace CleverDolphin
         public override void Update(GameTime gameTime)
         {
             destRectangle.X -= 2;
-            /*
-            coinA.X -= 2;
-            coinB.X -= 2;
-            coinC.X -= 2;
-             */
-
+           
         }
     }
 }

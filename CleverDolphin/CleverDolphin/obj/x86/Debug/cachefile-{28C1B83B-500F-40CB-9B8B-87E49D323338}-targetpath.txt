@@ -1,4 +1,3 @@
-Content\lumba.xnb
 Content\ocean_sea_waves_vector.xnb
 Content\awan copy2.xnb
 Content\coin.xnb

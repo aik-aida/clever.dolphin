@@ -34,10 +34,10 @@ namespace CleverDolphin
 
         int height;
         int width;
-        int delay;
+        
         public Game1()
         {
-            delay = 300;
+         
             height = 720;
             width = 1280;
             playerPosition = new Vector2(35, 330);
