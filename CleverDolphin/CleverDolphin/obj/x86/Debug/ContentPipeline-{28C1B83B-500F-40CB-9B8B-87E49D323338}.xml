@@ -83,6 +83,15 @@
       <Time>2014-05-26T23:27:26.0142405+07:00</Time>
     </Item>
     <Item>
+      <Source>si cumi cumi.png</Source>
+      <Name>si cumi cumi</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si cumi cumi.xnb</Output>
+      <Time>2014-05-31T17:35:36.5887275+07:00</Time>
+    </Item>
+    <Item>
       <Source>SpriteFont1.spritefont</Source>
       <Name>SpriteFont1</Name>
       <Importer>FontDescriptionImporter</Importer>

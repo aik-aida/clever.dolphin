@@ -29,6 +29,7 @@ namespace CleverDolphin
             this.maxHeight = maxHeight;
             destRectangle = new Rectangle((int)Position.X, (int)Position.Y, width, height/4);
             sourcRectangle = new Rectangle(0, 0, width, height / 4);
+
             dolphinAnimation.Initialize(3, 100, width, height / 4);
         }
 
@@ -84,6 +85,7 @@ namespace CleverDolphin
 
         public override void Draw(SpriteBatch spriteBatch)
         {
+            Console.WriteLine("bbbb");
            // DolphinAnimation.Draw(spriteBatch);
             spriteBatch.Draw(myTexture, destRectangle, sourcRectangle, Color.White);
         }

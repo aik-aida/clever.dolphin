@@ -12,14 +12,8 @@ using Microsoft.Xna.Framework.Media;
 
 namespace CleverDolphin
 {
-    /// <summary>
-    /// This is a game component that implements IUpdateable.
-    /// </summary>
     class Coin : Sprite
     {
-
-        List<Sprite>choise;
-
         public Coin(Texture2D textureCoin, int id, int row)
             : base(textureCoin)
         {
@@ -45,21 +39,12 @@ namespace CleverDolphin
 
         }
 
-        /// <summary>
-        /// Allows the game component to perform any initialization it needs to before starting
-        /// to run.  This is where it can query for any required services and load content.
-        /// </summary>
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(myTexture, destRectangle, Color.White);
 
         }
 
-
-        /// <summary>
-        /// Allows the game component to update itself.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public override void Update(GameTime gameTime)
         {
             destRectangle.X -= 2;
