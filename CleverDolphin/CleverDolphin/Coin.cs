@@ -18,6 +18,8 @@ namespace CleverDolphin
     class Coin : Sprite
     {
 
+        List<Sprite>choise;
+
         public Coin(Texture2D textureCoin, int id, int row)
             : base(textureCoin)
         {
