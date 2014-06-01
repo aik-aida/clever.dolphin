@@ -17,11 +17,15 @@ namespace CleverDolphin
     {
         Vector2 numberPos;
         SpriteFont font;
+        Boolean value;
+        String bubbleText;
 
-        public Bubble(Texture2D textureCoin, SpriteFont text, int id, int row)
+        public Bubble(Texture2D textureCoin, SpriteFont text, String _string, Boolean val, int id, int row)
             : base(textureCoin)
         {
             font = text;
+            bubbleText = _string;
+            value = val;
 
             int datar = 0;
             int tinggi = 0;
@@ -45,7 +49,7 @@ namespace CleverDolphin
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(myTexture, destRectangle, Color.White);
-            spriteBatch.DrawString(font, "lalalala", numberPos, Color.Black);
+            spriteBatch.DrawString(font, bubbleText, numberPos, Color.Black);
 
         }
 

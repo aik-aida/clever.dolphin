@@ -24,7 +24,7 @@ namespace CleverDolphin
         Sprite sky;
         Vector2 playerPosition;
 
-        List<Sprite> listBubble;
+        _3choise _3pilihan;
         List<Sprite> listCumi;
         SpriteFont score;
         SpriteFont number;
@@ -59,20 +59,18 @@ namespace CleverDolphin
 
         protected override void Initialize()
         {
+            rand = new Random();
+            n = rand.Next(1, 10);
 
-            listBubble = new List<Sprite>();
+            _3pilihan = new _3choise(Content.Load<Texture2D>("si bubble"), Content.Load<SpriteFont>("medium"), n);
             listCumi = new List<Sprite>();
             prevTimeBubble = TimeSpan.Zero;
             newTimeBubble = TimeSpan.FromSeconds(15.0);
             newTimeCumi = TimeSpan.FromSeconds(10.0);
 
-            rand = new Random();
-            n = rand.Next(1, 10);
-
             base.Initialize();
         }
 
-   
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -122,7 +120,7 @@ namespace CleverDolphin
             dolphin.Draw(spriteBatch);
 
             //menampilkan list Bubble
-            foreach (Sprite sp in listBubble)
+            foreach (Sprite sp in _3pilihan.listBubble)
                 sp.Draw(spriteBatch);
 
             foreach (Sprite rp in listCumi)
@@ -142,7 +140,7 @@ namespace CleverDolphin
             Sprite bubbleRemove = null;
             Sprite cumiRemove = null;
 
-            foreach (Sprite sp in listBubble)
+            foreach (Sprite sp in _3pilihan.listBubble)
             {
                 if (dolphin.destRectangle.Intersects(sp.destRectangle))
                 {
@@ -163,7 +161,7 @@ namespace CleverDolphin
             }
 
             if (bubbleRemove != null)
-                listBubble.Remove(bubbleRemove);
+                _3pilihan.listBubble.Remove(bubbleRemove);
             
             if (cumiRemove != null)
                 listCumi.Remove(cumiRemove);
@@ -175,11 +173,7 @@ namespace CleverDolphin
             
             Random r = new Random();
 
-            for (int i = 1; i <= 3; i++)
-            {
-                int a = r.Next(1, 4);
-                listBubble.Add(new Bubble(Content.Load<Texture2D>("si bubble"), Content.Load<SpriteFont>("medium"), a, i));
-            }
+            _3pilihan.UpdateList();
 
             
             int nCumi = r.Next(1,6);
@@ -203,7 +197,7 @@ namespace CleverDolphin
             if (gameTime.TotalGameTime - prevTimeBubble > newTimeBubble)
             {
                 prevTimeBubble = gameTime.TotalGameTime;
-                listBubble.Clear();
+                _3pilihan.listBubble.Clear();
                 AddThing();
             }
 
@@ -215,7 +209,7 @@ namespace CleverDolphin
 
 
 
-            foreach (Sprite sp in listBubble)
+            foreach (Sprite sp in _3pilihan.listBubble)
                 sp.Update(gameTime);
             
             foreach (Sprite rp in listCumi)
