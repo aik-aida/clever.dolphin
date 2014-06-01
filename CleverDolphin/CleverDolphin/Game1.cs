@@ -24,7 +24,7 @@ namespace CleverDolphin
         Sprite sky;
         Vector2 playerPosition;
 
-        List<Sprite> listCoin;
+        List<Sprite> listBubble;
         List<Sprite> listCumi;
         SpriteFont score;
         SpriteFont number;
@@ -33,9 +33,9 @@ namespace CleverDolphin
         int sc;
         int n;
 
-        TimeSpan newTimeCoin;
+        TimeSpan newTimeBubble;
         TimeSpan newTimeCumi;
-        TimeSpan prevTimeCoin;
+        TimeSpan prevTimeBubble;
         Random rand;
 
         int height;
@@ -58,11 +58,11 @@ namespace CleverDolphin
 
         protected override void Initialize()
         {
-            
-            listCoin = new List<Sprite>();
+
+            listBubble = new List<Sprite>();
             listCumi = new List<Sprite>();
-            prevTimeCoin = TimeSpan.Zero;
-            newTimeCoin = TimeSpan.FromSeconds(15.0);
+            prevTimeBubble = TimeSpan.Zero;
+            newTimeBubble = TimeSpan.FromSeconds(15.0);
             newTimeCumi = TimeSpan.FromSeconds(10.0);
 
             rand = new Random();
@@ -120,14 +120,14 @@ namespace CleverDolphin
             ocean.Draw(spriteBatch);
             dolphin.Draw(spriteBatch);
 
-            //menampilkan list coin
-            foreach (Sprite sp in listCoin)
+            //menampilkan list Bubble
+            foreach (Sprite sp in listBubble)
                 sp.Draw(spriteBatch);
 
             foreach (Sprite rp in listCumi)
                 rp.Draw(spriteBatch);
 
-            //menampilkan font score coin
+            //menampilkan font score Bubble
             spriteBatch.DrawString(score, sc.ToString(), fontScore, Color.Black);
 
             spriteBatch.DrawString(number, n.ToString(), fontNumber, Color.White);
@@ -138,14 +138,14 @@ namespace CleverDolphin
          
         private void CollisionThing()
         {
-            Sprite coinRemove = null;
+            Sprite bubbleRemove = null;
             Sprite cumiRemove = null;
 
-            foreach (Sprite sp in listCoin)
+            foreach (Sprite sp in listBubble)
             {
                 if (dolphin.destRectangle.Intersects(sp.destRectangle))
                 {
-                    coinRemove = sp;
+                    bubbleRemove = sp;
                     sc += 100;
                     break;
                 }
@@ -161,8 +161,8 @@ namespace CleverDolphin
                 }
             }
 
-            if (coinRemove != null)
-                listCoin.Remove(coinRemove);
+            if (bubbleRemove != null)
+                listBubble.Remove(bubbleRemove);
             
             if (cumiRemove != null)
                 listCumi.Remove(cumiRemove);
@@ -177,7 +177,7 @@ namespace CleverDolphin
             for (int i = 1; i <= 3; i++)
             {
                 int a = r.Next(1, 4);
-                listCoin.Add(new Coin(Content.Load<Texture2D>("si bubble"), Content.Load<SpriteFont>("medium"), a, i));
+                listBubble.Add(new Bubble(Content.Load<Texture2D>("si bubble"), Content.Load<SpriteFont>("medium"), a, i));
             }
 
             
@@ -199,22 +199,22 @@ namespace CleverDolphin
 
         private void UpdateThing(GameTime gameTime)
         {
-            if (gameTime.TotalGameTime - prevTimeCoin > newTimeCoin)
+            if (gameTime.TotalGameTime - prevTimeBubble > newTimeBubble)
             {
-                prevTimeCoin = gameTime.TotalGameTime;
-                listCoin.Clear();
-                AddThing();
-            }
-            
-            if (gameTime.TotalGameTime - prevTimeCoin > newTimeCumi)
-            {
-                prevTimeCoin = gameTime.TotalGameTime;
+                prevTimeBubble = gameTime.TotalGameTime;
+                listBubble.Clear();
                 AddThing();
             }
 
-            
+            if (gameTime.TotalGameTime - prevTimeBubble > newTimeCumi)
+            {
+                prevTimeBubble = gameTime.TotalGameTime;
+                AddThing();
+            }
 
-            foreach (Sprite sp in listCoin)
+
+
+            foreach (Sprite sp in listBubble)
                 sp.Update(gameTime);
             
             foreach (Sprite rp in listCumi)

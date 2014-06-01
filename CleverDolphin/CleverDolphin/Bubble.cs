@@ -12,19 +12,19 @@ using Microsoft.Xna.Framework.Media;
 
 namespace CleverDolphin
 {
-    class Coin : Sprite
+   
+    class Bubble : Sprite
     {
-
         Vector2 numberPos;
         SpriteFont font;
 
-        public Coin(Texture2D textureCoin, SpriteFont text, int id, int row)
+        public Bubble(Texture2D textureCoin, SpriteFont text, int id, int row)
             : base(textureCoin)
         {
             font = text;
 
-            int datar=0;
-            int tinggi=0;
+            int datar = 0;
+            int tinggi = 0;
             switch (id)
             {
                 case 1: datar = 1500; break;
@@ -38,7 +38,7 @@ namespace CleverDolphin
                 case 3: tinggi = 650; break;
             }
 
-            numberPos = new Vector2(datar+20, tinggi+20);
+            numberPos = new Vector2(datar + 20, tinggi + 20);
             destRectangle = new Rectangle(datar, tinggi, 140, 80);
         }
 
@@ -56,5 +56,3 @@ namespace CleverDolphin
         }
     }
 }
-
-
