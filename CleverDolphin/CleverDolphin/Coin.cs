@@ -14,9 +14,14 @@ namespace CleverDolphin
 {
     class Coin : Sprite
     {
-        public Coin(Texture2D textureCoin, int id, int row)
+
+        Vector2 numberPos;
+        SpriteFont font;
+
+        public Coin(Texture2D textureCoin, SpriteFont text, int id, int row)
             : base(textureCoin)
         {
+            font = text;
 
             int datar=0;
             int tinggi=0;
@@ -33,22 +38,21 @@ namespace CleverDolphin
                 case 3: tinggi = 650; break;
             }
 
-           
-            destRectangle = new Rectangle(datar, tinggi, 50, 50);
-
-
+            numberPos = new Vector2(datar+20, tinggi+20);
+            destRectangle = new Rectangle(datar, tinggi, 140, 80);
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(myTexture, destRectangle, Color.White);
+            spriteBatch.DrawString(font, "lalalala", numberPos, Color.Black);
 
         }
 
         public override void Update(GameTime gameTime)
         {
             destRectangle.X -= 2;
-           
+            numberPos.X -= 2;
         }
     }
 }

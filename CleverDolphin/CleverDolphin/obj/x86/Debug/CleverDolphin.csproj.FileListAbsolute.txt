@@ -8,9 +8,13 @@ C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolph
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\clever1.xnb
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si lumba lumba.xnb
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si cumi cumi.xnb
-C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si bubble.xnb
+C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\coinText.xnb
+C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\medium.xnb
+C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\small.xnb
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\CleverDolphin.exe
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\CleverDolphin.pdb
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.exe
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.pdb
+C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.csprojResolveAssemblyReference.cache

@@ -20,7 +20,9 @@ namespace CleverDolphin
         public Vector2 Position;
         float keyboardFreeze;
         Animation dolphinAnimation;
-        
+
+        public Vector2 numberPos;
+
         public Dolphin(Texture2D dolphinTextr, Vector2 position, int width, int height,int maxHeight)
             : base(dolphinTextr)
         {
@@ -31,6 +33,8 @@ namespace CleverDolphin
             sourcRectangle = new Rectangle(0, 0, width, height / 4);
 
             dolphinAnimation.Initialize(3, 100, width, height / 4);
+            numberPos = new Vector2(150, 320);
+            
         }
 
         
@@ -45,7 +49,10 @@ namespace CleverDolphin
             {
                 elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
                 if (elapsed <= delay)
+                {
                     destRectangle.Y += speed;
+                    numberPos.Y += speed;
+                }
                 else
                 {
                     keyboardFreeze = 0;
@@ -57,8 +64,11 @@ namespace CleverDolphin
             if (moveUp == 1)
             {
                 elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-                if (elapsed <= delay)
+                if (elapsed <= delay) 
+                {
                     destRectangle.Y -= speed;
+                    numberPos.Y -= speed;
+                }
                 else
                 {
                     keyboardFreeze = 0;
@@ -88,6 +98,8 @@ namespace CleverDolphin
             Console.WriteLine("bbbb");
            // DolphinAnimation.Draw(spriteBatch);
             spriteBatch.Draw(myTexture, destRectangle, sourcRectangle, Color.White);
+
+            
         }
 
         

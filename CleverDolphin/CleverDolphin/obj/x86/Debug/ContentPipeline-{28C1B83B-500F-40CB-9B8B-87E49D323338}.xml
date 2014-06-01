@@ -92,13 +92,40 @@
       <Time>2014-05-31T17:35:36.5887275+07:00</Time>
     </Item>
     <Item>
-      <Source>SpriteFont1.spritefont</Source>
-      <Name>SpriteFont1</Name>
+      <Source>si bubble.png</Source>
+      <Name>si bubble</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si bubble.xnb</Output>
+      <Time>2014-05-31T21:53:30.3485991+07:00</Time>
+    </Item>
+    <Item>
+      <Source>coinText.spritefont</Source>
+      <Name>coinText</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\coinText.xnb</Output>
       <Time>2014-05-26T11:56:02.3772481+07:00</Time>
+    </Item>
+    <Item>
+      <Source>medium.spritefont</Source>
+      <Name>medium</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\medium.xnb</Output>
+      <Time>2014-06-01T08:28:12.2604305+07:00</Time>
+    </Item>
+    <Item>
+      <Source>small.spritefont</Source>
+      <Name>small</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\small.xnb</Output>
+      <Time>2014-06-01T06:54:47.1234823+07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

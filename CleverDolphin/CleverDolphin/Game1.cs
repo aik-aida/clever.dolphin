@@ -27,8 +27,11 @@ namespace CleverDolphin
         List<Sprite> listCoin;
         List<Sprite> listCumi;
         SpriteFont score;
-        Vector2 font1;
+        SpriteFont number;
+        Vector2 fontScore;
+        Vector2 fontNumber;
         int sc;
+        int n;
 
         TimeSpan newTimeCoin;
         TimeSpan newTimeCumi;
@@ -61,7 +64,9 @@ namespace CleverDolphin
             prevTimeCoin = TimeSpan.Zero;
             newTimeCoin = TimeSpan.FromSeconds(15.0);
             newTimeCumi = TimeSpan.FromSeconds(10.0);
+
             rand = new Random();
+            n = rand.Next(1, 10);
 
             base.Initialize();
         }
@@ -73,8 +78,12 @@ namespace CleverDolphin
             dolphin = new Dolphin(Content.Load<Texture2D>("si lumba lumba"), playerPosition, 140 ,240, height);
             sky = new Sky(Content.Load<Texture2D>("awan copy"), Content.Load<Texture2D>("awan copy2"),width,380);
             ocean = new Ocean(Content.Load<Texture2D>("SEANEW"), Content.Load<Texture2D>("SEANEW"),width, height);
-            score = Content.Load<SpriteFont>("SpriteFont1");
-            font1 = new Vector2(1100, 0);
+
+            score = Content.Load<SpriteFont>("coinText");
+            fontScore = new Vector2(1100, 0);
+
+            number = Content.Load<SpriteFont>("small");
+            fontNumber = dolphin.numberPos;
 
             AddThing();
             
@@ -91,6 +100,8 @@ namespace CleverDolphin
                 this.Exit();
 
             dolphin.UpdateMovement(gameTime);
+            fontNumber = dolphin.numberPos;
+
             sky.Update(gameTime);
             ocean.Update(gameTime);
 
@@ -117,7 +128,9 @@ namespace CleverDolphin
                 rp.Draw(spriteBatch);
 
             //menampilkan font score coin
-            spriteBatch.DrawString(score, sc.ToString(), font1, Color.Black);
+            spriteBatch.DrawString(score, sc.ToString(), fontScore, Color.Black);
+
+            spriteBatch.DrawString(number, n.ToString(), fontNumber, Color.White);
             spriteBatch.End();
 
             base.Draw(gameTime);
@@ -164,7 +177,7 @@ namespace CleverDolphin
             for (int i = 1; i <= 3; i++)
             {
                 int a = r.Next(1, 4);
-                listCoin.Add(new Coin(Content.Load<Texture2D>("coin"), a, i));
+                listCoin.Add(new Coin(Content.Load<Texture2D>("si bubble"), Content.Load<SpriteFont>("medium"), a, i));
             }
 
             
@@ -196,7 +209,6 @@ namespace CleverDolphin
             if (gameTime.TotalGameTime - prevTimeCoin > newTimeCumi)
             {
                 prevTimeCoin = gameTime.TotalGameTime;
-                //listCumi.Clear();
                 AddThing();
             }
 
