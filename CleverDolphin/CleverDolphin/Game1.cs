@@ -52,6 +52,7 @@ namespace CleverDolphin
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = height;
             graphics.PreferredBackBufferWidth = width;
+            
             //graphics.IsFullScreen = true;
    
         }

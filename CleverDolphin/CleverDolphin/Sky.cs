@@ -19,8 +19,8 @@ namespace CleverDolphin
             this.width = width;
             this.height = height;
             this.sktTxtr2 = addPict;
-            rect1 = new Rectangle(0, 0, this.width, this.height);
-            rect2 = new Rectangle(this.width, 0, this.width, this.height);
+            rect1 = new Rectangle(0, 50, this.width, this.height);
+            rect2 = new Rectangle(this.width, 50, this.width, this.height);
             
         
         }
