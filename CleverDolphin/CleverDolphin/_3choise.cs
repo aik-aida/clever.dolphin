@@ -27,7 +27,6 @@ namespace CleverDolphin
             this.textureBubble =textureBubble;
             this.text = text;
             this.number = number;
-            AddThing(textureBubble, text, number);
         }
         
         public void UpdateList()
