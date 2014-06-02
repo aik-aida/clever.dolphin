@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System.IO;
 
 namespace CleverDolphin
 {
@@ -29,6 +30,7 @@ namespace CleverDolphin
         SpriteFont score;
         SpriteFont number;
         Vector2 fontScore;
+        Vector2 fontHighScore;
         Vector2 fontNumber;
         int sc;
         int n;
@@ -40,6 +42,9 @@ namespace CleverDolphin
 
         int height;
         int width;
+
+        string text;
+        int text2;
         
         public Game1()
         {
@@ -80,6 +85,7 @@ namespace CleverDolphin
 
             score = Content.Load<SpriteFont>("coinText");
             fontScore = new Vector2(1100, 0);
+            fontHighScore = new Vector2(500, 0);
 
             number = Content.Load<SpriteFont>("small");
             fontNumber = dolphin.numberPos;
@@ -128,7 +134,7 @@ namespace CleverDolphin
 
             //menampilkan font score Bubble
             spriteBatch.DrawString(score, sc.ToString(), fontScore, Color.Black);
-
+            spriteBatch.DrawString(score, text2.ToString(), fontHighScore, Color.Black);
             spriteBatch.DrawString(number, n.ToString(), fontNumber, Color.White);
             spriteBatch.End();
 
@@ -206,9 +212,7 @@ namespace CleverDolphin
                 prevTimeBubble = gameTime.TotalGameTime;
                 AddThing();
             }
-
-
-
+            
             foreach (Sprite sp in _3pilihan.listBubble)
                 sp.Update(gameTime);
             
@@ -216,6 +220,14 @@ namespace CleverDolphin
                 rp.Update(gameTime);
             
             CollisionThing();
+        }
+
+        private void AccessHighScore()
+        {
+            text = File.ReadAllText(Path.Combine(Environment.CurrentDirectory, "\\highscore.txt"));
+            text2 = Convert.ToInt32(text);
+            
+
         }
     }
 }
