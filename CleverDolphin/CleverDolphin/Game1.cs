@@ -76,7 +76,7 @@ namespace CleverDolphin
             spriteBatch = new SpriteBatch(GraphicsDevice);
             dolphin = new Dolphin(Content.Load<Texture2D>("si lumba lumba"), playerPosition, 140 ,240, height);
             sky = new Sky(Content.Load<Texture2D>("awan copy"), Content.Load<Texture2D>("awan copy2"),width,380);
-            ocean = new Ocean(Content.Load<Texture2D>("SEANEW"), Content.Load<Texture2D>("SEANEW"),width, height);
+            ocean = new Ocean(Content.Load<Texture2D>("seapolos1"), Content.Load<Texture2D>("seapolos2"),width, height);
 
             score = Content.Load<SpriteFont>("coinText");
             fontScore = new Vector2(1100, 0);
