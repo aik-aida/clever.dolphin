@@ -19,6 +19,7 @@ namespace CleverDolphin
         Texture2D textureBubble;
         SpriteFont text;
         int number;
+        Random rand;
 
         public _3choise(Texture2D textureBubble, SpriteFont text, int number)
             : base(textureBubble)
@@ -27,53 +28,65 @@ namespace CleverDolphin
             this.textureBubble =textureBubble;
             this.text = text;
             this.number = number;
+
+            rand = new Random();
         }
         
         public void UpdateList()
         {
-            AddThing(textureBubble, text, number);
+            AddThing();
         }
 
-        private void AddThing(Texture2D textureBubble, SpriteFont text, int number)
+        private void AddThing()
         {
-
-            Random rand = rand = new Random();
-            int num;
-
-            num = rand.Next(0, 10);
-
             
-            int answerPos = rand.Next(1, 4);
+            int answerPos;
+            int a;
+            int i;
+            String _string;
 
-            for (int i = 1; i <= 3; i++)
+            answerPos = rand.Next(1, 4);
+            
+
+            for(i = 1; i <= 3; i++)
             {
-                String _string = CreateAnswer(number , answerPos, i);
-                int a = rand.Next(1, 4);
+                
+                a = rand.Next(1, 4);
 
-                if(i==answerPos)
+                if (i == answerPos)
+                {
+                    _string = CreateAnswer(true);
                     listBubble.Add(new Bubble(textureBubble, text, _string, true, a, i));
+                }
                 else
+                {
+                    _string = CreateAnswer(false);
                     listBubble.Add(new Bubble(textureBubble, text, _string, false, a, i));
+                }
             }
         }
 
-        private String CreateAnswer(int num, int answerPos, int i)
+        private String CreateAnswer(Boolean val)
         {
-            Random rand = new Random();
+                int a=0;
+                int b=0;
+                int idOperand;
+                int position;
+                int num;
+                String text;
 
-                int a = rand.Next(1, 100);
-                int b;
+                num = number;
+                a = rand.Next(1, 10);
+                idOperand = rand.Next(0, 1); // belum pembagian, dan pengalian
+                position = rand.Next(0, 3);
 
-                int idOperand = rand.Next(0, 4);
-                int position = rand.Next(0, 3);
-
-                String text = "";
+                text = "";
 
                 switch (idOperand)
                 {
                     case 0: // '+'
                         b = num + a;
-                        if (i != answerPos)
+                        if (!val)
                             b += rand.Next(0, 6);
 
                         switch (position)
@@ -93,7 +106,7 @@ namespace CleverDolphin
 
                     case 1: // '-'
                         b = num - a;
-                        if (i != answerPos)
+                        if (!val)
                             b += rand.Next(0, 6);
 
                         switch (position)
@@ -106,14 +119,17 @@ namespace CleverDolphin
                                 text=a.ToString() + " - _ = " + b.ToString();
                                 break;
                             case 2: //_kanan
-                                text=a.ToString() + " - " + b.ToString() + " = _";
+                                text=a.ToString() + " ";
+                                if(b>=0)
+                                    text+="-";
+                                text+= " "+b.ToString() + " = _";
                                 break;
                         }
                         break;
 
                     case 2: // 'x'
                         b = num * a;
-                        if (i != answerPos)
+                        if (!val)
                             b += rand.Next(0, 6);
 
                         switch (position)
@@ -132,24 +148,31 @@ namespace CleverDolphin
                         break;
 
                     case 3: // '/'
-                        b = num / a;
-                        if (i != answerPos)
-                            b += rand.Next(0, 6);
-
-                        switch (position)
+                        if(true)
                         {
+                            if (num > a)
+                                b = num / a;
+                            else
+                                b = a / num;
 
-                            case 0: //_kiri
-                                text="_ / " + a.ToString() + " = " + b.ToString();
-                                break;
-                            case 1: //_tengah
-                                text=a.ToString() + " / _ = " + b.ToString();
-                                break;
-                            case 2: //_kanan
-                                text = a.ToString() + " / " + b.ToString() + " = _";
-                                break;
+                            if (!val)
+                                b += rand.Next(0, 6);
+
+                            switch (position)
+                            {
+
+                                case 0: //_kiri
+                                    text="_ : " + a.ToString() + " = " + b.ToString();
+                                    break;
+                                case 1: //_tengah
+                                    text=a.ToString() + " : _ = " + b.ToString();
+                                    break;
+                                case 2: //_kanan
+                                    text = a.ToString() + " : " + b.ToString() + " = _";
+                                    break;
+                            }
                         }
-                        break;
+                            break;
                 }
 
                 return text;

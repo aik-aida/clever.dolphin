@@ -23,7 +23,7 @@ namespace CleverDolphin
             cumiAnimation = new Animation();
             destRectangle = new Rectangle((int)position.X, (int)position.Y, width, height / 2);
             sourcRectangle = new Rectangle(0, 0, width, height / 2);
-            cumiAnimation.Initialize(1, 100, width, height / 2);
+            cumiAnimation.Initialize(1, 200, width, height / 2);
             
             //destRectangle = new Rectangle(1200, 500, 50,110);
             

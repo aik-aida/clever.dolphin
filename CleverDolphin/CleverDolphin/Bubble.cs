@@ -15,10 +15,10 @@ namespace CleverDolphin
    
     class Bubble : Sprite
     {
-        Vector2 numberPos;
-        SpriteFont font;
-        Boolean value;
-        String bubbleText;
+        public Vector2 numberPos;
+        public SpriteFont font;
+        public Boolean value;
+        public String bubbleText;
 
         public Bubble(Texture2D textureCoin, SpriteFont text, String _string, Boolean val, int id, int row)
             : base(textureCoin)

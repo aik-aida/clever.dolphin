@@ -145,8 +145,11 @@ namespace CleverDolphin
                 if (dolphin.destRectangle.Intersects(sp.destRectangle))
                 {
                     bubbleRemove = sp;
-                    sc += 100;
-                    break;
+                    if (((Bubble)sp).value)
+                    {
+                        sc += 100;
+                        break;
+                    }
                 }
             }
             
