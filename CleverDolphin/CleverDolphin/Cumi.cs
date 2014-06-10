@@ -16,9 +16,11 @@ namespace CleverDolphin
     {
         Animation cumiAnimation;
 
+       
         public Cumi(Texture2D texture, Vector2 position, int width, int height)
             : base(texture)
         {
+            Active = true;
             myTexture = texture;
             cumiAnimation = new Animation();
             destRectangle = new Rectangle((int)position.X, (int)position.Y, width, height / 2);
@@ -34,7 +36,7 @@ namespace CleverDolphin
             
             spriteBatch.Draw(myTexture, destRectangle, sourcRectangle, Color.White);
             //spriteBatch.Draw(myTexture, destRectangle, Color.White);
-            Console.WriteLine("aaaa");
+            //Console.WriteLine("aaaa");
 
         }
 
@@ -42,7 +44,9 @@ namespace CleverDolphin
         {
             sourcRectangle = cumiAnimation.Animate(gameTime);
 
-            destRectangle.X -= 2;
+            destRectangle.X -= 7;
+            if (destRectangle.X < 0)
+                Active = false;
 
             //base.Update(gameTime);
         }

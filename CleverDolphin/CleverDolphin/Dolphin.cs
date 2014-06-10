@@ -41,7 +41,7 @@ namespace CleverDolphin
         public void UpdateMovement(GameTime gameTime)
         {
             sourcRectangle = dolphinAnimation.Animate(gameTime);
-            delay = 100;
+            delay = 75;
             speed = 30;
             keyboardFreeze += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 

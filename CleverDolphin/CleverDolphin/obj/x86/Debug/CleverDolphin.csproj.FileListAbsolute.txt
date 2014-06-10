@@ -40,3 +40,23 @@ D:\KULIAH\SEMESTER 6\NET\CLONEBARU\CleverDolphin\CleverDolphin\obj\x86\Debug\Cle
 D:\KULIAH\SEMESTER 6\NET\CLONEBARU\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy3.xnb
 D:\KULIAH\SEMESTER 6\NET\CLONEBARU\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy4.xnb
 D:\KULIAH\SEMESTER 6\NET\CLONEBARU\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.csprojResolveAssemblyReference.cache
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.exe
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.pdb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\ocean_sea_waves_vector.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy2.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\coin.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\seapolos1.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\seapolos2.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\SEANEW.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\clever1.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si cumi cumi.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si bubble.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy3.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy4.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\coinText.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\medium.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\small.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\CleverDolphin.exe
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\CleverDolphin.pdb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\My First XNA Game\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt

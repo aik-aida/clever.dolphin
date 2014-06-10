@@ -23,12 +23,14 @@ namespace CleverDolphin
         public Bubble(Texture2D textureCoin, SpriteFont text, String _string, Boolean val, int id, int row)
             : base(textureCoin)
         {
+            Active = true;
             font = text;
             bubbleText = _string;
             value = val;
 
             int datar = 0;
             int tinggi = 0;
+            int satuan = 315;
             switch (id)
             {
                 case 1: datar = 1500; break;
@@ -37,9 +39,9 @@ namespace CleverDolphin
             }
             switch (row)
             {
-                case 1: tinggi = 350; break;
-                case 2: tinggi = 500; break;
-                case 3: tinggi = 650; break;
+                case 1: tinggi = satuan; break;
+                case 2: tinggi = satuan + 110; break;
+                case 3: tinggi = satuan + 220; break;
             }
 
             numberPos = new Vector2(datar + 20, tinggi + 20);
@@ -55,8 +57,11 @@ namespace CleverDolphin
 
         public override void Update(GameTime gameTime)
         {
-            destRectangle.X -= 2;
-            numberPos.X -= 2;
+            
+            destRectangle.X -= 7;
+            numberPos.X -= 7;
+            if (destRectangle.X < 0)
+                Active = false;
         }
     }
 }
