@@ -1,0 +1,3 @@
+C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphinContent\obj\x86\Debug\CleverDolphinContent.contentprojResolveAssemblyReference.cache
+C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphinContent\obj\x86\Debug\CleverDolphinContent.contentprojResolveAssemblyReference.cache
+D:\KULIAH\SEMESTER 6\NET\CLONEBARU\CleverDolphin\CleverDolphinContent\obj\x86\Debug\CleverDolphinContent.contentprojResolveAssemblyReference.cache
