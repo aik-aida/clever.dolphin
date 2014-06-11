@@ -17,23 +17,24 @@ namespace CleverDolphin
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
         Dolphin dolphin;
+
         Sprite ocean;
         Sprite sky;
-        Vector2 playerPosition;
+        List<Sprite> listCumi;
 
         _3choise _3pilihan;
-        List<Sprite> listCumi;
         SpriteFont score;
         SpriteFont number;
+
+        Vector2 playerPosition;
         Vector2 fontScore;
         Vector2 fontHighScore;
         Vector2 fontNumber;
-        int sc;
-        int n;
 
         TimeSpan newTimeBubble;
         TimeSpan newTimeCumi;
@@ -43,41 +44,42 @@ namespace CleverDolphin
         TimeSpan timeAddBubble;
         Random rand;
 
-        int height;
-        int width;
+        int tempScore;
+        int initialNumber;
+        int windowHeight;
+        int windowWidth;
+        int stopSpawn;
 
         string text;
         int text2;
 
         float delay;
         float timeSpan;
-        int stopSpawn;
-        
-        
+
+
         public Game1()
         {
-         
-            height = 720;
-            width = 1280;
+
+            windowHeight = 720;
+            windowWidth = 1280;
             playerPosition = new Vector2(35, 330);
-            sc = 0;
+            tempScore = 0;
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferHeight = height;
-            graphics.PreferredBackBufferWidth = width;
-            
-           // graphics.IsFullScreen = true;
-   
+            graphics.PreferredBackBufferHeight = windowHeight;
+            graphics.PreferredBackBufferWidth = windowWidth;
+
+            // graphics.IsFullScreen = true;
+
         }
 
         protected override void Initialize()
         {
             rand = new Random();
-            n = rand.Next(1, 10);
+            initialNumber = rand.Next(1, 10);
             timeSpan = 0;
             delay = 1;
             stopSpawn = 0;
-            _3pilihan = new _3choise(Content.Load<Texture2D>("si bubble"), Content.Load<SpriteFont>("medium"), n);
             listCumi = new List<Sprite>();
             prevTimeBubble = TimeSpan.Zero;
             prevTimeCumi = TimeSpan.Zero;
@@ -92,9 +94,10 @@ namespace CleverDolphin
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            dolphin = new Dolphin(Content.Load<Texture2D>("si lumba lumba"), playerPosition, 140 ,240, height);
-            sky = new Sky(Content.Load<Texture2D>("awan copy"), Content.Load<Texture2D>("awan copy2"), Content.Load<Texture2D>("awan copy3"), Content.Load<Texture2D>("awan copy4"), width, 380);
-            ocean = new Ocean(Content.Load<Texture2D>("seapolos1"), Content.Load<Texture2D>("seapolos2"),width, height);
+            dolphin = new Dolphin(Content.Load<Texture2D>("si lumba lumba"), playerPosition, 140, 240, windowHeight);
+            sky = new Sky(Content.Load<Texture2D>("awan copy"), Content.Load<Texture2D>("awan copy2"), Content.Load<Texture2D>("awan copy3"), Content.Load<Texture2D>("awan copy4"), windowWidth, 380);
+            ocean = new Ocean(Content.Load<Texture2D>("seapolos1"), Content.Load<Texture2D>("seapolos2"), windowWidth, windowHeight);
+            _3pilihan = new _3choise(Content.Load<Texture2D>("si bubble"), Content.Load<SpriteFont>("medium"), initialNumber);
 
             score = Content.Load<SpriteFont>("coinText");
             fontScore = new Vector2(1100, 0);
@@ -104,12 +107,12 @@ namespace CleverDolphin
             fontNumber = dolphin.numberPos;
 
             AddThing();
-            
+
         }
 
         protected override void UnloadContent()
         {
-            
+
         }
 
         protected override void Update(GameTime gameTime)
@@ -122,7 +125,6 @@ namespace CleverDolphin
 
             sky.Update(gameTime);
             ocean.Update(gameTime);
-
             UpdateThing(gameTime);
 
             base.Update(gameTime);
@@ -146,14 +148,14 @@ namespace CleverDolphin
                 rp.Draw(spriteBatch);
 
             //menampilkan font score Bubble
-            spriteBatch.DrawString(score, sc.ToString(), fontScore, Color.Black);
+            spriteBatch.DrawString(score, tempScore.ToString(), fontScore, Color.Black);
             spriteBatch.DrawString(score, text2.ToString(), fontHighScore, Color.Black);
-            spriteBatch.DrawString(number, n.ToString(), fontNumber, Color.White);
+            spriteBatch.DrawString(number, initialNumber.ToString(), fontNumber, Color.White);
             spriteBatch.End();
 
             base.Draw(gameTime);
         }
-         
+
         private void CollisionThing()
         {
             Sprite bubbleRemove = null;
@@ -166,66 +168,75 @@ namespace CleverDolphin
                     bubbleRemove = sp;
                     if (((Bubble)sp).value)
                     {
-                        sc += 100;
+                        tempScore += 100;
+                        text2 += 1;
+                        _3pilihan.listBubble.Clear();
                         break;
                     }
+                    else
+                    {
+                        tempScore -= 50;
+                        _3pilihan.listBubble.Clear();
+                        break;
+                    }
+
                 }
             }
-            
+
             foreach (Sprite rp in listCumi)
             {
                 if (dolphin.destRectangle.Intersects(rp.destRectangle))
                 {
                     //cumiRemove = rp;
                     rp.Active = false;
-                    sc += 50;
+                    tempScore += 50;
                     break;
                 }
             }
 
             if (bubbleRemove != null)
                 _3pilihan.listBubble.Remove(bubbleRemove);
-            
+
             //if (cumiRemove != null)
             //    listCumi.Remove(cumiRemove);
-             
+
         }
 
         private void AddThing()
         {
-            
+
             Random r = new Random();
 
-        //    _3pilihan.UpdateList();
+            //    _3pilihan.UpdateList();
 
-            
-            int nCumi = r.Next(1,6);
+
+            int nCumi = r.Next(1, 6);
             int satuan = 315;
-           // for (int i = 1; i <= nCumi; i++)
+            // for (int i = 1; i <= nCumi; i++)
             //{
-                int y = r.Next(1, 4);
-                int x = r.Next(1, 23);
-                switch (y)
-                {
-                    case 1: y = satuan; break;
-                    case 2: y = satuan + 110; break;
-                    case 3: y = satuan + 220; break;
-                }
+            int y = r.Next(1, 4);
+            int x = r.Next(1, 23);
+            switch (y)
+            {
+                case 1: y = satuan; break;
+                case 2: y = satuan + 110; break;
+                case 3: y = satuan + 220; break;
+            }
 
-                //listCumi.Add(new Cumi(Content.Load<Texture2D>("si cumi cumi"), new Vector2((1280 + (x * 58)), y), 58, 123));
-                listCumi.Add(new Cumi(Content.Load<Texture2D>("si cumi cumi"), new Vector2(width, y),58,123));
+            //listCumi.Add(new Cumi(Content.Load<Texture2D>("si cumi cumi"), new Vector2((1280 + (x * 58)), y), 58, 123));
+            listCumi.Add(new Cumi(Content.Load<Texture2D>("si cumi cumi"), new Vector2(windowWidth, y), 58, 123));
             //}
 
-            
+
         }
 
-        
+
         private void UpdateThing(GameTime gameTime)
         {
             timeSpan += (float)gameTime.ElapsedGameTime.TotalSeconds;
             timeAddCumi = gameTime.TotalGameTime - prevTimeCumi;
-            timeAddBubble = gameTime.TotalGameTime - prevTimeBubble; 
-            
+            timeAddBubble = gameTime.TotalGameTime - prevTimeBubble;
+
             if (timeAddBubble > newTimeBubble && stopSpawn == 0)
             {
                 prevTimeBubble = gameTime.TotalGameTime;
@@ -256,7 +267,7 @@ namespace CleverDolphin
                 rp.Update(gameTime);
             }
              * */
-            
+
 
             for (int i = 0; i < listCumi.Count; i++)
             {
@@ -265,7 +276,7 @@ namespace CleverDolphin
                 else
                     listCumi[i].Update(gameTime);
             }
-            
+
             CollisionThing();
         }
 
@@ -273,7 +284,7 @@ namespace CleverDolphin
         {
             text = File.ReadAllText(Path.Combine(Environment.CurrentDirectory, "\\highscore.txt"));
             text2 = Convert.ToInt32(text);
-            
+
         }
     }
 }

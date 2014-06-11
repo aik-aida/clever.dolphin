@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace CleverDolphin
 {
-   
+
     class Bubble : Sprite
     {
         public Vector2 numberPos;
@@ -28,15 +28,15 @@ namespace CleverDolphin
             bubbleText = _string;
             value = val;
 
-            int datar = 0;
+            int datar = 1500;
             int tinggi = 0;
             int satuan = 315;
-            switch (id)
+            /*switch (id)
             {
                 case 1: datar = 1500; break;
                 case 2: datar = 1450; break;
                 case 3: datar = 1400; break;
-            }
+            }*/
             switch (row)
             {
                 case 1: tinggi = satuan; break;
@@ -57,7 +57,7 @@ namespace CleverDolphin
 
         public override void Update(GameTime gameTime)
         {
-            
+
             destRectangle.X -= 7;
             numberPos.X -= 7;
             if (destRectangle.X < 0)
