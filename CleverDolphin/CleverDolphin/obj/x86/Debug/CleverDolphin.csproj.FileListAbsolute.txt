@@ -61,6 +61,7 @@ E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game
 E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.exe
 E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.pdb
+<<<<<<< Updated upstream
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\ocean_sea_waves_vector.xnb
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy2.xnb
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\coin.xnb
@@ -83,3 +84,9 @@ C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolph
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.exe
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.pdb
+=======
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.csprojResolveAssemblyReference.cache
+>>>>>>> Stashed changes
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\sampah.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\dasaran stamina.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\stamina.xnb

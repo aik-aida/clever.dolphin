@@ -31,7 +31,7 @@ namespace CleverDolphin
         _3choise _3pilihan;
         SpriteFont score;
         SpriteFont number;
-
+        
         Vector2 playerPosition;
         Vector2 fontScore;
         Vector2 fontHighScore;
@@ -46,6 +46,9 @@ namespace CleverDolphin
         TimeSpan timeAddCumi;
         TimeSpan timeAddKaleng;
         TimeSpan timeAddBubble;
+
+        Texture2D staminaPict;
+        StaminaGauge staminaGauge;
         Random rand;
 
         int tempScore;
@@ -57,6 +60,9 @@ namespace CleverDolphin
         string text;
         int text2;
 
+        int staminaValue;
+        int staminaParam;
+
         float delay;
         float timeSpan;
 
@@ -66,8 +72,10 @@ namespace CleverDolphin
 
             windowHeight = 720;
             windowWidth = 1280;
+            staminaValue = 100;
             playerPosition = new Vector2(35, 330);
             tempScore = 0;
+            staminaParam = 0;
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = windowHeight;
@@ -105,10 +113,12 @@ namespace CleverDolphin
             sky = new Sky(Content.Load<Texture2D>("awan copy"), Content.Load<Texture2D>("awan copy2"), Content.Load<Texture2D>("awan copy3"), Content.Load<Texture2D>("awan copy4"), windowWidth, 380);
             ocean = new Ocean(Content.Load<Texture2D>("seapolos1"), Content.Load<Texture2D>("seapolos2"), windowWidth, windowHeight);
             _3pilihan = new _3choise(Content.Load<Texture2D>("si bubble"), Content.Load<SpriteFont>("medium"), initialNumber);
-
+            staminaPict = Content.Load<Texture2D>("dasaran stamina");
+            staminaGauge = new StaminaGauge(Content.Load<Texture2D>("stamina"), new Vector2(55, 5), 180, 40);
             score = Content.Load<SpriteFont>("coinText");
             fontScore = new Vector2(1100, 0);
             fontHighScore = new Vector2(500, 0);
+           // staminaBar = new Vector2(50,0);
 
             number = Content.Load<SpriteFont>("small");
             fontNumber = dolphin.numberPos;
@@ -133,7 +143,8 @@ namespace CleverDolphin
             sky.Update(gameTime);
             ocean.Update(gameTime);
             UpdateThing(gameTime);
-
+            DrainStamina(gameTime);
+            staminaGauge.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -160,7 +171,10 @@ namespace CleverDolphin
             //menampilkan font score Bubble
             spriteBatch.DrawString(score, tempScore.ToString(), fontScore, Color.Black);
             spriteBatch.DrawString(score, text2.ToString(), fontHighScore, Color.Black);
+           // spriteBatch.DrawString(score, staminaValue.ToString(), staminaBar, Color.Yellow);
             spriteBatch.DrawString(number, initialNumber.ToString(), fontNumber, Color.White);
+            spriteBatch.Draw(staminaPict, new Rectangle(50, 2, 190, 47), Color.White);
+            staminaGauge.Draw(spriteBatch);
             spriteBatch.End();
 
             base.Draw(gameTime);
@@ -246,6 +260,16 @@ namespace CleverDolphin
 
         }
 
+        private void DrainStamina(GameTime gameTime)
+        {
+            staminaParam += (int)gameTime.ElapsedGameTime.TotalMilliseconds;
+            if (staminaParam > 2000)
+            {
+                staminaValue -= 1;
+                staminaParam = 0;
+            }
+            Console.WriteLine(staminaValue);
+        }
 
         private void UpdateThing(GameTime gameTime)
         {
