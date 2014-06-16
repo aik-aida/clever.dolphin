@@ -27,7 +27,8 @@ namespace CleverDolphin
         GameState CurrentGameState = GameState.MainMenu;
 
         Button btnPlay;
-
+        Button btnPlayAgain;
+        Button btnExit;
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -63,6 +64,9 @@ namespace CleverDolphin
         Texture2D staminaPict;
         StaminaGauge staminaGauge;
         Random rand;
+
+        SoundEffect effect, effect_1, effect_2;
+        Song song;
 
         int tempScore;
         int initialNumber;
@@ -136,6 +140,11 @@ namespace CleverDolphin
             btnPlay = new Button(Content.Load<Texture2D>("Play"), graphics.GraphicsDevice);
             btnPlay.setPosition(new Vector2(200, 400));
 
+            btnPlayAgain = new Button(Content.Load<Texture2D>("playAgain"), graphics.GraphicsDevice);
+            btnPlayAgain.setPosition(new Vector2(200, 400));
+
+            btnExit = new Button(Content.Load<Texture2D>("exit"), graphics.GraphicsDevice);
+            btnExit.setPosition(new Vector2(400, 400));
 
             dolphin = new Dolphin(Content.Load<Texture2D>("si lumba lumba"), playerPosition, 140, 240, windowHeight);
             sky = new Sky(Content.Load<Texture2D>("awan copy"), Content.Load<Texture2D>("awan copy2"), Content.Load<Texture2D>("awan copy3"), Content.Load<Texture2D>("awan copy4"), windowWidth, 380);
@@ -148,6 +157,14 @@ namespace CleverDolphin
             fontHighScore = new Vector2(500, 0);
             fontHighScore2 = new Vector2(700, 0);
            // staminaBar = new Vector2(50,0);
+
+
+            effect = Content.Load<SoundEffect>("button-3");
+            effect_1 = Content.Load<SoundEffect>("BUBBLE");
+            effect_2 = Content.Load<SoundEffect>("dolphin");
+            song = Content.Load<Song>("CAREFREE AND HAPPY UPBEAT UKULELE INSTRUMENTAL BACKGROUND MUSIC - Mp3 Download (2.70 MB)");
+            MediaPlayer.Play(song);
+            MediaPlayer.IsRepeating = true;
 
             number = Content.Load<SpriteFont>("small");
             fontNumber = dolphin.numberPos;
@@ -173,11 +190,11 @@ namespace CleverDolphin
             {
                 case GameState.MainMenu:
                     if (btnPlay.isClicked == true) CurrentGameState = GameState.Playing;
-                    btnPlay.Update(mouse);
+                    btnPlay.Update(mouse, effect);
                     break;
 
                 case GameState.Playing:
-                    dolphin.UpdateMovement(gameTime);
+                    dolphin.UpdateMovement(gameTime, effect_1);
                     fontNumber = dolphin.numberPos;
 
                     sky.Update(gameTime);
@@ -191,7 +208,14 @@ namespace CleverDolphin
                     break;
 
                 case GameState.GameOver:
-                    Exit();
+                    if (btnPlayAgain.isClicked == true)
+                    {
+                        CurrentGameState = GameState.Playing;
+                        status = true;
+                    }
+                    else if (btnExit.isClicked == true) Exit();
+                    btnPlayAgain.Update(mouse, effect);
+                    btnExit.Update(mouse, effect);
                     break;
 
                 default:
@@ -241,6 +265,12 @@ namespace CleverDolphin
 
                     break;
 
+                case GameState.GameOver:
+                    spriteBatch.Draw(Content.Load<Texture2D>("HALAMAN DEPAN copy"), new Rectangle(0, 0, windowWidth, windowHeight), Color.White);
+                    btnPlayAgain.Draw(spriteBatch);
+                    btnExit.Draw(spriteBatch);
+                    break;
+
                 default:
                     break;
             }
@@ -255,7 +285,7 @@ namespace CleverDolphin
             base.Draw(gameTime);
         }
 
-        private void CollisionThing()
+        private void CollisionThing(SoundEffect effect_2)
         {
             Sprite bubbleRemove = null;
 
@@ -269,6 +299,7 @@ namespace CleverDolphin
                         tempScore += 100;
                         text2 += 1;
                         _3pilihan.listBubble.Clear();
+                        effect_2.Play();
                         break;
                     }
                     else
@@ -287,6 +318,7 @@ namespace CleverDolphin
                 {
                     rp.Active = false;
                     tempScore += 50;
+                    effect_2.Play();
                     break;
                 }
             }
@@ -414,7 +446,7 @@ namespace CleverDolphin
                     listKaleng[i].Update(gameTime);
             }
 
-            CollisionThing();
+            CollisionThing(effect_2);
         }
 
         private void AccessHighScore()

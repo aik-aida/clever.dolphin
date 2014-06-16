@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -38,7 +39,7 @@ namespace CleverDolphin
         }
 
         
-        public void UpdateMovement(GameTime gameTime)
+        public void UpdateMovement(GameTime gameTime, SoundEffect effect)
         {
             sourcRectangle = dolphinAnimation.Animate(gameTime);
             delay = 75;
@@ -58,7 +59,8 @@ namespace CleverDolphin
                     keyboardFreeze = 0;
                     moveDown = 0;
                     elapsed = 0;
-                }   
+                }
+                effect.Play();
             }
 
             if (moveUp == 1)
@@ -75,6 +77,7 @@ namespace CleverDolphin
                     moveUp = 0;
                     elapsed = 0;
                 }
+                effect.Play();
             }
 
             movement = Keyboard.GetState();
@@ -82,12 +85,14 @@ namespace CleverDolphin
             {
                 keyboardFreeze = 0;
                 moveDown = 1;
+                effect.Play();
             }
 
             if (movement.IsKeyDown(Keys.Up) && keyboardFreeze >= delay && destRectangle.Y - 200 > (maxHeight / 3))
             {
                 keyboardFreeze = 0;
                 moveUp = 1;
+                effect.Play();
             }
             //base.Update(gameTime);
              

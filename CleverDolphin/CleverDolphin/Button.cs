@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -28,7 +29,7 @@ namespace CleverDolphin
 
         bool down;
         public bool isClicked;
-        public void Update(MouseState mouse)
+        public void Update(MouseState mouse, SoundEffect effect)
         {
             rectangle = new Rectangle((int)position.X, (int)position.Y, (int)size.X, (int)size.Y );
 
@@ -41,7 +42,12 @@ namespace CleverDolphin
                 if (down) warna.A += 3;
                 else warna.A -= 3;
 
-                if (mouse.LeftButton == ButtonState.Pressed) isClicked = true;
+                if (mouse.LeftButton == ButtonState.Pressed)
+                { 
+                    isClicked = true;
+                    effect.Play();
+
+                }
             }
             else if (warna.A < 255)
             {
