@@ -21,7 +21,8 @@ namespace CleverDolphin
         enum GameState
         {
             MainMenu,
-            Playing
+            Playing,
+            GameOver
         }
         GameState CurrentGameState = GameState.MainMenu;
 
@@ -80,7 +81,7 @@ namespace CleverDolphin
         float delay;
         float timeSpan;
 
-
+        public static bool status = true;
         public Game1()
         {
 
@@ -174,6 +175,7 @@ namespace CleverDolphin
                     if (btnPlay.isClicked == true) CurrentGameState = GameState.Playing;
                     btnPlay.Update(mouse);
                     break;
+
                 case GameState.Playing:
                     dolphin.UpdateMovement(gameTime);
                     fontNumber = dolphin.numberPos;
@@ -184,7 +186,14 @@ namespace CleverDolphin
                     DrainStamina(gameTime);
                     staminaGauge.Update(gameTime);
 
+                    if (status == false) CurrentGameState = GameState.GameOver;
+
                     break;
+
+                case GameState.GameOver:
+                    Exit();
+                    break;
+
                 default:
                     break;
             }

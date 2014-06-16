@@ -75,3 +75,5 @@ D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\obj\x
 D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.pdb
 D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\HALAMAN DEPAN copy.xnb
 D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\play.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\HALAMAN DEPAN copy.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\play.xnb
