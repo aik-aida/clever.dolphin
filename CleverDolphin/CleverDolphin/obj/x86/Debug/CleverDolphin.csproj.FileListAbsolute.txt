@@ -48,3 +48,30 @@ D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverD
 D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.exe
 D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.pdb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\ocean_sea_waves_vector.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy2.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\coin.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\seapolos1.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\seapolos2.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\SEANEW.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\clever1.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si cumi cumi.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si bubble.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy3.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy4.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si lumba lumba.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\sampah.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\dasaran stamina.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\stamina.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\coinText.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\medium.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\small.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\CleverDolphin.exe
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\CleverDolphin.pdb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.csprojResolveAssemblyReference.cache
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.exe
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.pdb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\HALAMAN DEPAN copy.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\play.xnb

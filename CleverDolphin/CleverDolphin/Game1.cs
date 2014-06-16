@@ -18,10 +18,21 @@ namespace CleverDolphin
     public class Game1 : Microsoft.Xna.Framework.Game
     {
 
+        enum GameState
+        {
+            MainMenu,
+            Playing
+        }
+        GameState CurrentGameState = GameState.MainMenu;
+
+        Button btnPlay;
+
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
         Dolphin dolphin;
+
 
         Sprite ocean;
         Sprite sky;
@@ -89,6 +100,8 @@ namespace CleverDolphin
 
         protected override void Initialize()
         {
+
+
             rand = new Random();
             initialNumber = rand.Next(1, 10);
             timeSpan = 0;
@@ -112,6 +125,17 @@ namespace CleverDolphin
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            //graphics.PreferredBackBufferWidth = windowWidth;
+            //graphics.PreferredBackBufferHeight = windowHeight;
+
+            graphics.ApplyChanges();
+            IsMouseVisible = true;
+
+            btnPlay = new Button(Content.Load<Texture2D>("Play"), graphics.GraphicsDevice);
+            btnPlay.setPosition(new Vector2(200, 400));
+
+
             dolphin = new Dolphin(Content.Load<Texture2D>("si lumba lumba"), playerPosition, 140, 240, windowHeight);
             sky = new Sky(Content.Load<Texture2D>("awan copy"), Content.Load<Texture2D>("awan copy2"), Content.Load<Texture2D>("awan copy3"), Content.Load<Texture2D>("awan copy4"), windowWidth, 380);
             ocean = new Ocean(Content.Load<Texture2D>("seapolos1"), Content.Load<Texture2D>("seapolos2"), windowWidth, windowHeight);
@@ -141,15 +165,31 @@ namespace CleverDolphin
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            dolphin.UpdateMovement(gameTime);
-            fontNumber = dolphin.numberPos;
+            MouseState mouse = Mouse.GetState();
 
-            sky.Update(gameTime);
-            ocean.Update(gameTime);
-            UpdateThing(gameTime);
-            DrainStamina(gameTime);
-            staminaGauge.Update(gameTime);
-            base.Update(gameTime);
+            switch (CurrentGameState)
+
+            {
+                case GameState.MainMenu:
+                    if (btnPlay.isClicked == true) CurrentGameState = GameState.Playing;
+                    btnPlay.Update(mouse);
+                    break;
+                case GameState.Playing:
+                    dolphin.UpdateMovement(gameTime);
+                    fontNumber = dolphin.numberPos;
+
+                    sky.Update(gameTime);
+                    ocean.Update(gameTime);
+                    UpdateThing(gameTime);
+                    DrainStamina(gameTime);
+                    staminaGauge.Update(gameTime);
+
+                    break;
+                default:
+                    break;
+            }
+
+      
         }
 
 
@@ -158,28 +198,49 @@ namespace CleverDolphin
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
 
-            sky.Draw(spriteBatch);
-            ocean.Draw(spriteBatch);
-            dolphin.Draw(spriteBatch);
 
-            //menampilkan list Bubble
-            foreach (Sprite sp in _3pilihan.listBubble)
-                sp.Draw(spriteBatch);
+            switch (CurrentGameState)
+            {
+                case GameState.MainMenu:
+                    spriteBatch.Draw(Content.Load<Texture2D>("HALAMAN DEPAN copy"), new Rectangle(0, 0, windowWidth, windowHeight), Color.White);
+                    btnPlay.Draw(spriteBatch);
+                    break;
+                case GameState.Playing:
+                    sky.Draw(spriteBatch);
+                    ocean.Draw(spriteBatch);
+                    dolphin.Draw(spriteBatch);
 
-            foreach (Sprite rp in listCumi)
-                rp.Draw(spriteBatch);
 
-            foreach (Sprite smp in listKaleng)
-                smp.Draw(spriteBatch);
+                    //menampilkan list Bubble
+                    foreach (Sprite sp in _3pilihan.listBubble)
+                        sp.Draw(spriteBatch);
 
-            //menampilkan font score Bubble
-            spriteBatch.DrawString(score, tempScore.ToString(), fontScore, Color.Black);
-            spriteBatch.DrawString(score, text2.ToString(), fontHighScore, Color.Black);
-            spriteBatch.DrawString(score, text3.ToString(), fontHighScore2, Color.Black);
-           // spriteBatch.DrawString(score, staminaValue.ToString(), staminaBar, Color.Yellow);
-            spriteBatch.DrawString(number, initialNumber.ToString(), fontNumber, Color.White);
-            spriteBatch.Draw(staminaPict, new Rectangle(50, 2, 190, 47), Color.White);
-            staminaGauge.Draw(spriteBatch);
+                    foreach (Sprite rp in listCumi)
+                        rp.Draw(spriteBatch);
+
+                    foreach (Sprite smp in listKaleng)
+                        smp.Draw(spriteBatch);
+
+                    //menampilkan font score Bubble
+                    spriteBatch.DrawString(score, tempScore.ToString(), fontScore, Color.Black);
+                    spriteBatch.DrawString(score, text2.ToString(), fontHighScore, Color.Black);
+                    spriteBatch.DrawString(score, text3.ToString(), fontHighScore2, Color.Black);
+                   // spriteBatch.DrawString(score, staminaValue.ToString(), staminaBar, Color.Yellow);
+                    spriteBatch.DrawString(number, initialNumber.ToString(), fontNumber, Color.White);
+                    spriteBatch.Draw(staminaPict, new Rectangle(50, 2, 190, 47), Color.White);
+                    staminaGauge.Draw(spriteBatch);
+
+                    break;
+
+                default:
+                    break;
+            }
+ 
+
+
+  
+
+
             spriteBatch.End();
 
             base.Draw(gameTime);
