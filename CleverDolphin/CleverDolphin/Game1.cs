@@ -35,6 +35,7 @@ namespace CleverDolphin
         Vector2 playerPosition;
         Vector2 fontScore;
         Vector2 fontHighScore;
+        Vector2 fontHighScore2;
         Vector2 fontNumber;
 
         TimeSpan newTimeBubble;
@@ -59,6 +60,8 @@ namespace CleverDolphin
 
         string text;
         int text2;
+        int text3;
+        int highscores;
 
         int staminaValue;
         int staminaParam;
@@ -118,6 +121,7 @@ namespace CleverDolphin
             score = Content.Load<SpriteFont>("coinText");
             fontScore = new Vector2(1100, 0);
             fontHighScore = new Vector2(500, 0);
+            fontHighScore2 = new Vector2(700, 0);
            // staminaBar = new Vector2(50,0);
 
             number = Content.Load<SpriteFont>("small");
@@ -171,6 +175,7 @@ namespace CleverDolphin
             //menampilkan font score Bubble
             spriteBatch.DrawString(score, tempScore.ToString(), fontScore, Color.Black);
             spriteBatch.DrawString(score, text2.ToString(), fontHighScore, Color.Black);
+            spriteBatch.DrawString(score, text3.ToString(), fontHighScore2, Color.Black);
            // spriteBatch.DrawString(score, staminaValue.ToString(), staminaBar, Color.Yellow);
             spriteBatch.DrawString(number, initialNumber.ToString(), fontNumber, Color.White);
             spriteBatch.Draw(staminaPict, new Rectangle(50, 2, 190, 47), Color.White);
@@ -226,6 +231,21 @@ namespace CleverDolphin
 
             if (bubbleRemove != null)
                 _3pilihan.listBubble.Remove(bubbleRemove);
+
+            //access highscore
+            var path = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\highscore.txt");
+            string text = System.IO.File.ReadAllText(path);
+            int.TryParse(text, out text3);
+            highscores = text3;
+
+            if (highscores > tempScore)
+            {
+                text3 = highscores;
+            }
+            else
+            {
+                text3 = tempScore;
+            }
 
 
         }

@@ -23,3 +23,28 @@ C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolph
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.exe
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.pdb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\ocean_sea_waves_vector.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy2.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\coin.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\seapolos1.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\seapolos2.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\SEANEW.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\clever1.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si cumi cumi.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si bubble.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy3.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy4.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si lumba lumba.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\sampah.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\dasaran stamina.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\stamina.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\coinText.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\medium.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\small.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\CleverDolphin.exe
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\CleverDolphin.pdb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.csprojResolveAssemblyReference.cache
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.exe
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.pdb
