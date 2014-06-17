@@ -78,12 +78,12 @@ namespace CleverDolphin
         int windowWidth;
         int stopSpawn;
 
-        string text;
+        static string text;
         string rating;
         string displayRating;
         string tempRating;
         int correctAns;
-        int text3;
+        static int text3;
         int highscores;
         int tempHighScore;
 
@@ -97,6 +97,7 @@ namespace CleverDolphin
         int tempCanSpeed;
         int tempBubbleSpeed;
         public static bool status = true;
+        public static string path;
         public Game1()
         {
 
@@ -263,8 +264,15 @@ namespace CleverDolphin
                     GameEfect(gameTime);
 
 
-                    if (status == false) CurrentGameState = GameState.GameOver;
-                
+                    if (status == false)
+                    {
+                        if (tempHighScore > highscores)
+                        {
+                            var input = text3.ToString();
+                            System.IO.File.WriteAllText(path, input);
+                        }
+                        CurrentGameState = GameState.GameOver;
+                    }
 
                     break;
 
@@ -509,8 +517,8 @@ namespace CleverDolphin
                 _3pilihan.listBubble.Remove(bubbleRemove);
 
             //access highscore
-            var path = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\highscore.txt");
-            string text = System.IO.File.ReadAllText(path);
+            path = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\highscore.txt");
+            text = System.IO.File.ReadAllText(path);
             int.TryParse(text, out text3);
             tempHighScore = text3;
             highscores = text3;
@@ -525,12 +533,12 @@ namespace CleverDolphin
                 text3 = tempHighScore;
             }
 
-            if (status == false)// || tempHighScore > highscores)
+            /*if (status == false)// || tempHighScore > highscores)
             {
                 var input = text3.ToString();
                 System.IO.File.WriteAllText(path, input);
                 CurrentGameState = GameState.GameOver;
-            }
+            }*/
 
 
         }
