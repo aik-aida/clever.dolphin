@@ -78,6 +78,7 @@ namespace CleverDolphin
         int text2;
         int text3;
         int highscores;
+        int tempHighScore;
 
         float delay;
         float timeSpan;
@@ -356,15 +357,23 @@ namespace CleverDolphin
             var path = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\highscore.txt");
             string text = System.IO.File.ReadAllText(path);
             int.TryParse(text, out text3);
+            tempHighScore = text3;
             highscores = text3;
 
-            if (highscores > tempScore)
+            if (tempScore == 0 || highscores > tempScore)
             {
-                text3 = highscores;
+                text3 = tempHighScore;
             }
-            else
+            else if (highscores == tempScore || highscores < tempScore)
             {
-                text3 = tempScore;
+                tempHighScore = tempScore;
+                text3 = tempHighScore;
+            }
+
+            if (status == false || tempHighScore > highscores)
+            {
+                var input = text3.ToString();
+                System.IO.File.WriteAllText(path, input);
             }
 
 
@@ -457,12 +466,7 @@ namespace CleverDolphin
             CollisionThing(effect_2);
         }
 
-        private void AccessHighScore()
-        {
-            text = File.ReadAllText(Path.Combine(Environment.CurrentDirectory, "\\highscore.txt"));
-            text2 = Convert.ToInt32(text);
-
-        }
+        
     }
 }
 
