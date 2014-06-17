@@ -18,10 +18,23 @@ namespace CleverDolphin
     public class Game1 : Microsoft.Xna.Framework.Game
     {
 
+        enum GameState
+        {
+            MainMenu,
+            Playing,
+            GameOver
+        }
+        GameState CurrentGameState = GameState.MainMenu;
+
+        Button btnPlay;
+        Button btnPlayAgain;
+        Button btnExit;
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
         Dolphin dolphin;
+
 
         Sprite ocean;
         Sprite sky;
@@ -35,6 +48,7 @@ namespace CleverDolphin
         Vector2 playerPosition;
         Vector2 fontScore;
         Vector2 fontHighScore;
+        Vector2 fontHighScore2;
         Vector2 fontNumber;
 
         TimeSpan newTimeBubble;
@@ -51,6 +65,9 @@ namespace CleverDolphin
         StaminaGauge staminaGauge;
         Random rand;
 
+        SoundEffect effect, effect_1, effect_2;
+        Song song;
+
         int tempScore;
         int initialNumber;
         int windowHeight;
@@ -59,6 +76,8 @@ namespace CleverDolphin
 
         string text;
         int text2;
+        int text3;
+        int highscores;
 
         int staminaValue;
         int staminaParam;
@@ -66,7 +85,7 @@ namespace CleverDolphin
         float delay;
         float timeSpan;
 
-
+        public static bool status = true;
         public Game1()
         {
 
@@ -86,6 +105,8 @@ namespace CleverDolphin
 
         protected override void Initialize()
         {
+
+
             rand = new Random();
             initialNumber = rand.Next(1, 10);
             timeSpan = 0;
@@ -109,6 +130,22 @@ namespace CleverDolphin
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            //graphics.PreferredBackBufferWidth = windowWidth;
+            //graphics.PreferredBackBufferHeight = windowHeight;
+
+            graphics.ApplyChanges();
+            IsMouseVisible = true;
+
+            btnPlay = new Button(Content.Load<Texture2D>("Play"), graphics.GraphicsDevice);
+            btnPlay.setPosition(new Vector2(200, 400));
+
+            btnPlayAgain = new Button(Content.Load<Texture2D>("playAgain"), graphics.GraphicsDevice);
+            btnPlayAgain.setPosition(new Vector2(200, 400));
+
+            btnExit = new Button(Content.Load<Texture2D>("exit"), graphics.GraphicsDevice);
+            btnExit.setPosition(new Vector2(400, 400));
+
             dolphin = new Dolphin(Content.Load<Texture2D>("si lumba lumba"), playerPosition, 140, 240, windowHeight);
             sky = new Sky(Content.Load<Texture2D>("awan copy"), Content.Load<Texture2D>("awan copy2"), Content.Load<Texture2D>("awan copy3"), Content.Load<Texture2D>("awan copy4"), windowWidth, 380);
             ocean = new Ocean(Content.Load<Texture2D>("seapolos1"), Content.Load<Texture2D>("seapolos2"), windowWidth, windowHeight);
@@ -118,7 +155,16 @@ namespace CleverDolphin
             score = Content.Load<SpriteFont>("coinText");
             fontScore = new Vector2(1100, 0);
             fontHighScore = new Vector2(500, 0);
+            fontHighScore2 = new Vector2(700, 0);
            // staminaBar = new Vector2(50,0);
+
+
+            effect = Content.Load<SoundEffect>("button-3");
+            effect_1 = Content.Load<SoundEffect>("BUBBLE");
+            effect_2 = Content.Load<SoundEffect>("dolphin");
+            song = Content.Load<Song>("CAREFREE AND HAPPY UPBEAT UKULELE INSTRUMENTAL BACKGROUND MUSIC - Mp3 Download (2.70 MB)");
+            MediaPlayer.Play(song);
+            MediaPlayer.IsRepeating = true;
 
             number = Content.Load<SpriteFont>("small");
             fontNumber = dolphin.numberPos;
@@ -137,15 +183,46 @@ namespace CleverDolphin
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            dolphin.UpdateMovement(gameTime);
-            fontNumber = dolphin.numberPos;
+            MouseState mouse = Mouse.GetState();
 
-            sky.Update(gameTime);
-            ocean.Update(gameTime);
-            UpdateThing(gameTime);
-            DrainStamina(gameTime);
-            staminaGauge.Update(gameTime);
-            base.Update(gameTime);
+            switch (CurrentGameState)
+
+            {
+                case GameState.MainMenu:
+                    if (btnPlay.isClicked == true) CurrentGameState = GameState.Playing;
+                    btnPlay.Update(mouse, effect);
+                    break;
+
+                case GameState.Playing:
+                    dolphin.UpdateMovement(gameTime, effect_1);
+                    fontNumber = dolphin.numberPos;
+
+                    sky.Update(gameTime);
+                    ocean.Update(gameTime);
+                    UpdateThing(gameTime);
+                    DrainStamina(gameTime);
+                    staminaGauge.Update(gameTime);
+
+                    if (status == false) CurrentGameState = GameState.GameOver;
+
+                    break;
+
+                case GameState.GameOver:
+                    if (btnPlayAgain.isClicked == true)
+                    {
+                        CurrentGameState = GameState.Playing;
+                        status = true;
+                    }
+                    else if (btnExit.isClicked == true) Exit();
+                    btnPlayAgain.Update(mouse, effect);
+                    btnExit.Update(mouse, effect);
+                    break;
+
+                default:
+                    break;
+            }
+
+      
         }
 
 
@@ -154,33 +231,61 @@ namespace CleverDolphin
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
 
-            sky.Draw(spriteBatch);
-            ocean.Draw(spriteBatch);
-            dolphin.Draw(spriteBatch);
 
-            //menampilkan list Bubble
-            foreach (Sprite sp in _3pilihan.listBubble)
-                sp.Draw(spriteBatch);
+            switch (CurrentGameState)
+            {
+                case GameState.MainMenu:
+                    spriteBatch.Draw(Content.Load<Texture2D>("HALAMAN DEPAN copy"), new Rectangle(0, 0, windowWidth, windowHeight), Color.White);
+                    btnPlay.Draw(spriteBatch);
+                    break;
+                case GameState.Playing:
+                    sky.Draw(spriteBatch);
+                    ocean.Draw(spriteBatch);
+                    dolphin.Draw(spriteBatch);
 
-            foreach (Sprite rp in listCumi)
-                rp.Draw(spriteBatch);
 
-            foreach (Sprite smp in listKaleng)
-                smp.Draw(spriteBatch);
+                    //menampilkan list Bubble
+                    foreach (Sprite sp in _3pilihan.listBubble)
+                        sp.Draw(spriteBatch);
 
-            //menampilkan font score Bubble
-            spriteBatch.DrawString(score, tempScore.ToString(), fontScore, Color.Black);
-            spriteBatch.DrawString(score, text2.ToString(), fontHighScore, Color.Black);
-           // spriteBatch.DrawString(score, staminaValue.ToString(), staminaBar, Color.Yellow);
-            spriteBatch.DrawString(number, initialNumber.ToString(), fontNumber, Color.White);
-            spriteBatch.Draw(staminaPict, new Rectangle(50, 2, 190, 47), Color.White);
-            staminaGauge.Draw(spriteBatch);
+                    foreach (Sprite rp in listCumi)
+                        rp.Draw(spriteBatch);
+
+                    foreach (Sprite smp in listKaleng)
+                        smp.Draw(spriteBatch);
+
+                    //menampilkan font score Bubble
+                    spriteBatch.DrawString(score, tempScore.ToString(), fontScore, Color.Black);
+                    spriteBatch.DrawString(score, text2.ToString(), fontHighScore, Color.Black);
+                    spriteBatch.DrawString(score, text3.ToString(), fontHighScore2, Color.Black);
+                   // spriteBatch.DrawString(score, staminaValue.ToString(), staminaBar, Color.Yellow);
+                    spriteBatch.DrawString(number, initialNumber.ToString(), fontNumber, Color.White);
+                    spriteBatch.Draw(staminaPict, new Rectangle(50, 2, 190, 47), Color.White);
+                    staminaGauge.Draw(spriteBatch);
+
+                    break;
+
+                case GameState.GameOver:
+                    spriteBatch.Draw(Content.Load<Texture2D>("HALAMAN DEPAN copy"), new Rectangle(0, 0, windowWidth, windowHeight), Color.White);
+                    btnPlayAgain.Draw(spriteBatch);
+                    btnExit.Draw(spriteBatch);
+                    break;
+
+                default:
+                    break;
+            }
+ 
+
+
+  
+
+
             spriteBatch.End();
 
             base.Draw(gameTime);
         }
 
-        private void CollisionThing()
+        private void CollisionThing(SoundEffect effect_2)
         {
             Sprite bubbleRemove = null;
 
@@ -194,6 +299,7 @@ namespace CleverDolphin
                         tempScore += 100;
                         text2 += 1;
                         _3pilihan.listBubble.Clear();
+                        effect_2.Play();
                         break;
                     }
                     else
@@ -212,6 +318,7 @@ namespace CleverDolphin
                 {
                     rp.Active = false;
                     tempScore += 50;
+                    effect_2.Play();
                     break;
                 }
             }
@@ -226,6 +333,21 @@ namespace CleverDolphin
 
             if (bubbleRemove != null)
                 _3pilihan.listBubble.Remove(bubbleRemove);
+
+            //access highscore
+            var path = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\highscore.txt");
+            string text = System.IO.File.ReadAllText(path);
+            int.TryParse(text, out text3);
+            highscores = text3;
+
+            if (highscores > tempScore)
+            {
+                text3 = highscores;
+            }
+            else
+            {
+                text3 = tempScore;
+            }
 
 
         }
@@ -324,7 +446,7 @@ namespace CleverDolphin
                     listKaleng[i].Update(gameTime);
             }
 
-            CollisionThing();
+            CollisionThing(effect_2);
         }
 
         private void AccessHighScore()

@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="Animation.cs" />
     <Compile Include="Bubble.cs" />
+    <Compile Include="Button.cs" />
     <Compile Include="Cumi.cs" />
     <Compile Include="Dolphin.cs" />
     <Compile Include="Obstacle.cs" />
