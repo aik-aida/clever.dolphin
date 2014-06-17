@@ -23,6 +23,7 @@ namespace CleverDolphin
         public Bubble(Texture2D textureCoin, SpriteFont text, String _string, Boolean val, int id, int row)
             : base(textureCoin)
         {
+            speed = 7;
             Active = true;
             font = text;
             bubbleText = _string;
@@ -58,8 +59,8 @@ namespace CleverDolphin
         public override void Update(GameTime gameTime)
         {
 
-            destRectangle.X -= 7;
-            numberPos.X -= 7;
+            destRectangle.X -= speed;
+            numberPos.X -= speed;
             if (destRectangle.X < 0)
                 Active = false;
         }

@@ -14,7 +14,6 @@ namespace CleverDolphin
         Texture2D oceanTxtr2;
         int width;
         int height;
-        int speed;
         public Ocean(Texture2D oceanTxtr, Texture2D oceanTxtr2,int width, int height)
             : base(oceanTxtr)
         {

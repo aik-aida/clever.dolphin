@@ -18,6 +18,7 @@ namespace CleverDolphin
         int height;
         public Sky(Texture2D skyTxtr, Texture2D addPict, Texture2D addPict2, Texture2D addPict3, int width, int height) : base(skyTxtr)
         {
+            speed = 2;
             this.width = width;
             this.height = height;
             this.sktTxtr2 = addPict;
@@ -53,10 +54,10 @@ namespace CleverDolphin
             if (rect4.X + width <= 0)
                 rect4.X = rect3.X + width;
 
-            rect1.X -= 2;
-            rect2.X -= 2;
-            rect3.X -= 2;
-            rect4.X -= 2;
+            rect1.X -= speed;
+            rect2.X -= speed;
+            rect3.X -= speed;
+            rect4.X -= speed;
             //myRectangle.X -= 2;
             //base.Update(gameTime);
         }

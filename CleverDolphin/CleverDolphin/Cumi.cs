@@ -20,6 +20,7 @@ namespace CleverDolphin
         public Cumi(Texture2D texture, Vector2 position, int width, int height)
             : base(texture)
         {
+            speed = 7;
             Active = true;
             myTexture = texture;
             cumiAnimation = new Animation();
@@ -44,7 +45,7 @@ namespace CleverDolphin
         {
             sourcRectangle = cumiAnimation.Animate(gameTime);
 
-            destRectangle.X -= 7;
+            destRectangle.X -= speed;
             if (destRectangle.X < 0)
                 Active = false;
 

@@ -13,6 +13,7 @@ namespace CleverDolphin
         public Rectangle destRectangle;
         public Rectangle sourcRectangle;
         public bool Active;
+        public int speed;
         public Sprite(Texture2D myTexture)
         {
             this.myTexture = myTexture;

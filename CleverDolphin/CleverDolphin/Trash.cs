@@ -17,6 +17,7 @@ namespace CleverDolphin
         public Trash(Texture2D texture, Vector2 position, int width, int height)
             : base(texture)
         {
+            speed = 10;
             Active = true;
             myTexture = texture;
             destRectangle = new Rectangle((int)position.X, (int)position.Y, width, height);
@@ -24,7 +25,7 @@ namespace CleverDolphin
 
         public override void Update(GameTime gameTime)
         {
-            destRectangle.X -= 10;
+            destRectangle.X -= speed;
             if (destRectangle.X < 0)
                 Active = false;
         }

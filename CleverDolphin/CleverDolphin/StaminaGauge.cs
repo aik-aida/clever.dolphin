@@ -36,7 +36,7 @@ namespace CleverDolphin
                 destRectangle.Width-=10;
                 sourcRectangle.Width-=10;
                 StaminaValue -= 10;
-                if (StaminaValue == 0)
+                if (StaminaValue <= 0)
                 {
                     Game1.status = false;
                 }
