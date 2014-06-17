@@ -146,15 +146,6 @@
       <Time>2014-06-17T07:59:00.807541+07:00</Time>
     </Item>
     <Item>
-      <Source>HALAMAN DEPAN copy.png</Source>
-      <Name>HALAMAN DEPAN copy</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\HALAMAN DEPAN copy.xnb</Output>
-      <Time>2014-06-17T07:59:00.7175409+07:00</Time>
-    </Item>
-    <Item>
       <Source>play.png</Source>
       <Name>play</Name>
       <Importer>TextureImporter</Importer>
@@ -244,6 +235,15 @@
       <Options>None</Options>
       <Output>D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\dolphin.xnb</Output>
       <Time>2014-06-17T07:59:00.7575409+07:00</Time>
+    </Item>
+    <Item>
+      <Source>halamanDepan.png</Source>
+      <Name>halamanDepan</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\halamanDepan.xnb</Output>
+      <Time>2014-06-17T08:45:24.0915578+07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

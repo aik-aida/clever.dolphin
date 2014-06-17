@@ -75,7 +75,6 @@ D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\obj\x
 D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.pdb
 D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\HALAMAN DEPAN copy.xnb
 D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\play.xnb
-D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\HALAMAN DEPAN copy.xnb
 D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\play.xnb
 D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\exit.xnb
 D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\playAgain.xnb
@@ -125,3 +124,4 @@ D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content
 D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\BUBBLE.xnb
 D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\dolphin.xnb
 D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\CAREFREE AND HAPPY UPBEAT UKULELE INSTRUMENTAL BACKGROUND MUSIC - Mp3 Download (2.70 MB).wma
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\halamanDepan.xnb

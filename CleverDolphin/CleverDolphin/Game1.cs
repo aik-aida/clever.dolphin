@@ -235,7 +235,7 @@ namespace CleverDolphin
             switch (CurrentGameState)
             {
                 case GameState.MainMenu:
-                    spriteBatch.Draw(Content.Load<Texture2D>("HALAMAN DEPAN copy"), new Rectangle(0, 0, windowWidth, windowHeight), Color.White);
+                    spriteBatch.Draw(Content.Load<Texture2D>("halamanDepan"), new Rectangle(0, 0, windowWidth, windowHeight), Color.White);
                     btnPlay.Draw(spriteBatch);
                     break;
                 case GameState.Playing:
@@ -266,7 +266,7 @@ namespace CleverDolphin
                     break;
 
                 case GameState.GameOver:
-                    spriteBatch.Draw(Content.Load<Texture2D>("HALAMAN DEPAN copy"), new Rectangle(0, 0, windowWidth, windowHeight), Color.White);
+                    spriteBatch.Draw(Content.Load<Texture2D>("halamanDepan"), new Rectangle(0, 0, windowWidth, windowHeight), Color.White);
                     btnPlayAgain.Draw(spriteBatch);
                     btnExit.Draw(spriteBatch);
                     break;
