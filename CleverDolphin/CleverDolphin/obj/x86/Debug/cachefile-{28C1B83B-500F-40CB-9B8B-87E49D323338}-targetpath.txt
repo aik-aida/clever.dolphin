@@ -16,6 +16,10 @@ Content\dasaran stamina.xnb
 Content\stamina.xnb
 Content\play.xnb
 Content\halamanDepan.xnb
+Content\exit2.xnb
+Content\playAgain2.xnb
+Content\highscore.xnb
+Content\score.xnb
 Content\coinText.xnb
 Content\medium.xnb
 Content\small.xnb
@@ -28,7 +32,3 @@ Content\BUBBLE.xnb
 Content\dolphin.xnb
 Content\Reaction, Children Sound Effects.xnb
 Content\Disappointed Cartoon Booing Group Sound Effects.xnb
-Content\exit2.xnb
-Content\playAgain2.xnb
-Content\highscore.xnb
-Content\score.xnb

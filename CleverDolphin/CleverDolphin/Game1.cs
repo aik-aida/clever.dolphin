@@ -80,6 +80,7 @@ namespace CleverDolphin
 
         string text;
         string rating;
+        string displayRating;
         string tempRating;
         int correctAns;
         int text3;
@@ -118,6 +119,7 @@ namespace CleverDolphin
             rand = new Random();
             initialNumber = rand.Next(1, 10);
             rating = "Newbie";
+            displayRating = "Newbie";
             tempRating = string.Copy(rating);
             timeSpan = 0;
             delay = 1;
@@ -326,7 +328,7 @@ namespace CleverDolphin
 
                     //menampilkan font score Bubble
                     spriteBatch.DrawString(score, tempScore.ToString(), fontScore, Color.Black);
-                    spriteBatch.DrawString(score, rating, fontHighScore, Color.Black);
+                    spriteBatch.DrawString(score, displayRating, fontHighScore, Color.Black);
                     spriteBatch.DrawString(score, text3.ToString(), fontHighScore2, Color.Black);
                     // spriteBatch.DrawString(score, staminaValue.ToString(), staminaBar, Color.Yellow);
                     spriteBatch.DrawString(number, initialNumber.ToString(), fontNumber, Color.White);
@@ -357,7 +359,7 @@ namespace CleverDolphin
 
         private void GameEfect(GameTime gameTime)
         {
-            UpdateRating();
+            rating = UpdateRating(correctAns);
             UpdateSpeed(gameTime);
 
             if (dolphin.colorBody != Color.White)
@@ -396,34 +398,46 @@ namespace CleverDolphin
             }
         }
 
-        private void UpdateRating()
+        public String UpdateRating(int nCorrect)
         {
-            if (correctAns >= 3 && correctAns < 6)
+            String rateNow = "";
+            if (nCorrect >= 3 && nCorrect < 6)
             {
+                rateNow = "Moderate";
                 rating = "Moderate";
-
+                displayRating = "Moderate";
+                
             }
 
-            if (correctAns >= 6 && correctAns < 10)
+            if (nCorrect >= 6 && nCorrect < 10)
             {
+                rateNow = "Smart";
                 rating = "Smart";
+                displayRating = "Smart";
             }
 
-            if (correctAns >= 10 && correctAns < 15)
+            if (nCorrect >= 10 && nCorrect < 15)
             {
+                rateNow = "Clever";
                 rating = "Clever";
+                displayRating = "Clever";
             }
 
-            if (correctAns >= 18 && correctAns < 23)
+            if (nCorrect >= 18 && nCorrect < 23)
             {
+                rateNow = "Genius";
                 rating = "Genius";
+                displayRating = "Genius";
             }
 
-            if (correctAns >= 23 && correctAns <= 30)
+            if (nCorrect >= 23 && nCorrect <= 30)
             {
+                rateNow = "Professor";
                 rating = "Professor";
-
+                displayRating = "Professor";
             }
+
+            return rateNow;
         }
 
         private void CollisionThing(SoundEffect effect_2)
