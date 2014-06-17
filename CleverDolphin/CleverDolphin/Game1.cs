@@ -79,11 +79,10 @@ namespace CleverDolphin
         int text3;
         int highscores;
 
-        int staminaValue;
-        int staminaParam;
-
         float delay;
         float timeSpan;
+        float delayColor;
+        float timeSpanColor;
 
         public static bool status = true;
         public Game1()
@@ -91,10 +90,8 @@ namespace CleverDolphin
 
             windowHeight = 720;
             windowWidth = 1280;
-            staminaValue = 100;
             playerPosition = new Vector2(35, 330);
             tempScore = 0;
-            staminaParam = 0;
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = windowHeight;
@@ -111,6 +108,7 @@ namespace CleverDolphin
             initialNumber = rand.Next(1, 10);
             timeSpan = 0;
             delay = 1;
+            delayColor = 50;
             stopSpawn = 0;
             listCumi = new List<Sprite>();
             listKaleng = new List<Sprite>();
@@ -200,8 +198,9 @@ namespace CleverDolphin
                     sky.Update(gameTime);
                     ocean.Update(gameTime);
                     UpdateThing(gameTime);
-                    DrainStamina(gameTime);
+                    //DrainStamina(gameTime);
                     staminaGauge.Update(gameTime);
+                    GameEfect(gameTime);
 
                     if (status == false) CurrentGameState = GameState.GameOver;
 
@@ -275,14 +274,22 @@ namespace CleverDolphin
                     break;
             }
  
-
-
-  
-
-
             spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+
+        private void GameEfect(GameTime gameTime)
+        {
+            if (dolphin.colorBody != Color.White)
+            {
+                timeSpanColor += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+                if (timeSpanColor > delayColor)
+                {
+                    dolphin.colorBody = Color.White;
+                    timeSpanColor = 0;
+                }
+            }
         }
 
         private void CollisionThing(SoundEffect effect_2)
@@ -296,6 +303,7 @@ namespace CleverDolphin
                     bubbleRemove = sp;
                     if (((Bubble)sp).value)
                     {
+                        dolphin.colorBody = Color.Yellow;
                         tempScore += 100;
                         text2 += 1;
                         _3pilihan.listBubble.Clear();
@@ -304,7 +312,8 @@ namespace CleverDolphin
                     }
                     else
                     {
-                        tempScore -= 50;
+                        dolphin.colorBody = Color.Red;
+                        //tempScore -= 50;
                         _3pilihan.listBubble.Clear();
                         break;
                     }
@@ -316,6 +325,12 @@ namespace CleverDolphin
             {
                 if (dolphin.destRectangle.Intersects(rp.destRectangle))
                 {
+                    if (staminaGauge.StaminaValue < staminaGauge.Width)
+                    {
+                        staminaGauge.StaminaValue += 7;
+                        staminaGauge.sourcRectangle.Width += 7;
+                        staminaGauge.destRectangle.Width += 7;
+                    }
                     rp.Active = false;
                     tempScore += 50;
                     effect_2.Play();
@@ -325,6 +340,9 @@ namespace CleverDolphin
 
             foreach (Sprite smp in listKaleng) {
                 if(dolphin.destRectangle.Intersects(smp.destRectangle)) {
+                    staminaGauge.StaminaValue -= 7;
+                    staminaGauge.sourcRectangle.Width -= 7;
+                    staminaGauge.destRectangle.Width -= 7;
                     smp.Active = false;
                     tempScore -= 50;
                     break;
@@ -382,17 +400,7 @@ namespace CleverDolphin
 
         }
 
-        private void DrainStamina(GameTime gameTime)
-        {
-            staminaParam += (int)gameTime.ElapsedGameTime.TotalMilliseconds;
-            if (staminaParam > 2000)
-            {
-                staminaValue -= 1;
-                staminaParam = 0;
-            }
-            Console.WriteLine(staminaValue);
-        }
-
+        
         private void UpdateThing(GameTime gameTime)
         {
             timeSpan += (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -409,7 +417,7 @@ namespace CleverDolphin
                 //AddThing();
             }
 
-            if (timeAddCumi > newTimeCumi && stopSpawn == 0 || timeAddKaleng > newTimeKaleng && stopSpawn == 0)
+            if (timeAddCumi > newTimeCumi && stopSpawn == 0 || timeAddKaleng > newTimeKaleng && listKaleng.Count <= 1 && stopSpawn == 0)
             {
                 if(timeAddCumi > newTimeCumi && stopSpawn == 0)
                     prevTimeCumi = gameTime.TotalGameTime;

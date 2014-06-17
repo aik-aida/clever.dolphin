@@ -86,3 +86,37 @@ D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x
 D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\button-3.xnb
 D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\BUBBLE.xnb
 D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\dolphin.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\ocean_sea_waves_vector.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy2.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\coin.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\seapolos1.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\seapolos2.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\SEANEW.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\clever1.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si cumi cumi.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si bubble.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy3.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\awan copy4.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\si lumba lumba.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\sampah.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\dasaran stamina.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\stamina.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\coinText.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\medium.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\small.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\HALAMAN DEPAN copy.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\play.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\exit.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\playAgain.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\CAREFREE AND HAPPY UPBEAT UKULELE INSTRUMENTAL BACKGROUND MUSIC - Mp3 Download (2.70 MB).xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\button-3.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\BUBBLE.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\dolphin.xnb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\CAREFREE AND HAPPY UPBEAT UKULELE INSTRUMENTAL BACKGROUND MUSIC - Mp3 Download (2.70 MB).wma
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\CleverDolphin.exe
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\CleverDolphin.pdb
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.csprojResolveAssemblyReference.cache
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.exe
+E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.pdb

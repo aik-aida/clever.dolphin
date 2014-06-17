@@ -11,6 +11,7 @@ namespace CleverDolphin
 {
     class Dolphin : Sprite
     {
+        public Color colorBody;
         KeyboardState movement;
         float elapsed;
         float delay;
@@ -21,6 +22,7 @@ namespace CleverDolphin
         public Vector2 Position;
         float keyboardFreeze;
         Animation dolphinAnimation;
+        
 
         public Vector2 numberPos;
 
@@ -32,6 +34,7 @@ namespace CleverDolphin
             this.maxHeight = maxHeight;
             destRectangle = new Rectangle((int)Position.X, (int)Position.Y, width, height/4);
             sourcRectangle = new Rectangle(0, 0, width, height / 4);
+            colorBody = Color.White;
 
             dolphinAnimation.Initialize(3, 100, width, height / 4);
             numberPos = new Vector2(150, 320);
@@ -102,7 +105,7 @@ namespace CleverDolphin
         {
             Console.WriteLine("bbbb");
            // DolphinAnimation.Draw(spriteBatch);
-            spriteBatch.Draw(myTexture, destRectangle, sourcRectangle, Color.White);
+            spriteBatch.Draw(myTexture, destRectangle, sourcRectangle, colorBody);
 
             
         }

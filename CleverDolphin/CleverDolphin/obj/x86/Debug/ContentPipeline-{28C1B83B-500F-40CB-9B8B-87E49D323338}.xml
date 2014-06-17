@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\HALAMAN DEPAN copy.xnb</Output>
-      <Time>2014-06-16T19:23:12.51528+07:00</Time>
+      <Time>2014-06-17T07:02:58.5072185+07:00</Time>
     </Item>
     <Item>
       <Source>play.png</Source>
@@ -161,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\play.xnb</Output>
-      <Time>2014-06-16T19:23:34.4195328+07:00</Time>
+      <Time>2014-06-17T07:02:58.6072242+07:00</Time>
     </Item>
     <Item>
       <Source>exit.png</Source>
@@ -170,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\exit.xnb</Output>
-      <Time>2014-06-17T00:34:26.7763866+07:00</Time>
+      <Time>2014-06-17T07:02:58.5362201+07:00</Time>
     </Item>
     <Item>
       <Source>playAgain.png</Source>
@@ -179,7 +179,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\playAgain.xnb</Output>
-      <Time>2014-06-17T00:34:26.801388+07:00</Time>
+      <Time>2014-06-17T07:02:58.6102244+07:00</Time>
     </Item>
     <Item>
       <Source>coinText.spritefont</Source>
@@ -216,7 +216,7 @@
       <Options>None</Options>
       <Output>D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\CAREFREE AND HAPPY UPBEAT UKULELE INSTRUMENTAL BACKGROUND MUSIC - Mp3 Download (2.70 MB).xnb</Output>
       <Extra>D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\CAREFREE AND HAPPY UPBEAT UKULELE INSTRUMENTAL BACKGROUND MUSIC - Mp3 Download (2.70 MB).wma</Extra>
-      <Time>2014-06-17T01:13:56.0609019+07:00</Time>
+      <Time>2014-06-17T07:02:58.4952178+07:00</Time>
     </Item>
     <Item>
       <Source>button-3.wav</Source>
@@ -225,7 +225,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\button-3.xnb</Output>
-      <Time>2014-06-17T01:25:52.6898908+07:00</Time>
+      <Time>2014-06-17T07:02:58.5112187+07:00</Time>
     </Item>
     <Item>
       <Source>BUBBLE.WAV</Source>
@@ -234,7 +234,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\BUBBLE.xnb</Output>
-      <Time>2014-06-17T01:33:25.8828119+07:00</Time>
+      <Time>2014-06-17T07:02:58.4522153+07:00</Time>
     </Item>
     <Item>
       <Source>dolphin.wav</Source>
@@ -243,7 +243,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\dolphin.xnb</Output>
-      <Time>2014-06-17T01:58:44.0666471+07:00</Time>
+      <Time>2014-06-17T07:02:58.5352201+07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

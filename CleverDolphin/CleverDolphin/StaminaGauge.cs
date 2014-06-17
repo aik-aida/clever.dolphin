@@ -9,18 +9,20 @@ namespace CleverDolphin
 {
     class StaminaGauge : Sprite
     {
-        int staminaValue;
+        
+        public int StaminaValue { get; set; }
+        public int Width { get; set; }
+        
         int staminaParam;
-        int width;
         int height;
         public StaminaGauge(Texture2D staminaText, Vector2 position, int width, int height)
             : base(staminaText)
         {
             Active = true;
-            this.width = width;
+            this.Width = width;
             this.height = height;
             staminaParam = 0;
-            staminaValue = width;
+            StaminaValue = width;
             destRectangle = new Rectangle((int)position.X, (int)position.Y, width, height);
             sourcRectangle = new Rectangle(0,0,width, height);
  
@@ -33,8 +35,8 @@ namespace CleverDolphin
             {
                 destRectangle.Width-=10;
                 sourcRectangle.Width-=10;
-                staminaValue -= 10;
-                if (staminaValue == 0)
+                StaminaValue -= 10;
+                if (StaminaValue == 0)
                 {
                     Game1.status = false;
                 }
