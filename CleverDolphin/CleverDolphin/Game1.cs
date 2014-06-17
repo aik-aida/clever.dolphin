@@ -25,11 +25,12 @@ namespace CleverDolphin
             GameOver
         }
         GameState CurrentGameState = GameState.MainMenu;
-        
+
 
         Button btnPlay;
         Button btnPlayAgain;
         Button btnExit;
+        Button btnExit2;
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -63,6 +64,8 @@ namespace CleverDolphin
         TimeSpan timeAddBubble;
 
         Texture2D staminaPict;
+        Texture2D highScorePict;
+        Texture2D ScorePict;
         StaminaGauge staminaGauge;
         Random rand;
 
@@ -180,22 +183,27 @@ namespace CleverDolphin
             btnPlay = new Button(Content.Load<Texture2D>("Play"), graphics.GraphicsDevice);
             btnPlay.setPosition(new Vector2(200, 400));
 
-            btnPlayAgain = new Button(Content.Load<Texture2D>("playAgain (2)"), graphics.GraphicsDevice);
+            btnPlayAgain = new Button(Content.Load<Texture2D>("playAgain2"), graphics.GraphicsDevice);
             btnPlayAgain.setPosition(new Vector2(200, 400));
 
-            btnExit = new Button(Content.Load<Texture2D>("exit (2)"), graphics.GraphicsDevice);
+            btnExit = new Button(Content.Load<Texture2D>("exit2"), graphics.GraphicsDevice);
             btnExit.setPosition(new Vector2(400, 400));
+
+            btnExit2 = new Button(Content.Load<Texture2D>("exit2"), graphics.GraphicsDevice);
+            btnExit2.setPosition(new Vector2(400, 400));
 
             dolphin = new Dolphin(Content.Load<Texture2D>("si lumba lumba"), playerPosition, 140, 240, windowHeight);
             sky = new Sky(Content.Load<Texture2D>("awan copy"), Content.Load<Texture2D>("awan copy2"), Content.Load<Texture2D>("awan copy3"), Content.Load<Texture2D>("awan copy4"), windowWidth, 380);
             ocean = new Ocean(Content.Load<Texture2D>("seapolos1"), Content.Load<Texture2D>("seapolos2"), windowWidth, windowHeight);
             _3pilihan = new _3choise(Content.Load<Texture2D>("si bubble"), Content.Load<SpriteFont>("medium"), initialNumber);
             staminaPict = Content.Load<Texture2D>("dasaran stamina");
+            highScorePict = Content.Load<Texture2D>("highscore");
+            ScorePict = Content.Load<Texture2D>("score");
             staminaGauge = new StaminaGauge(Content.Load<Texture2D>("stamina"), new Vector2(55, 5), 180, 40);
             score = Content.Load<SpriteFont>("coinText");
             fontScore = new Vector2(1100, 0);
             fontHighScore = new Vector2(250, 0);
-            fontHighScore2 = new Vector2(700, 0);
+            fontHighScore2 = new Vector2(810, 0);
             // staminaBar = new Vector2(50,0);
 
 
@@ -232,7 +240,13 @@ namespace CleverDolphin
             {
                 case GameState.MainMenu:
                     if (btnPlay.isClicked == true) CurrentGameState = GameState.Playing;
+                    else if (btnExit2.isClicked == true)
+                    {
+                        //effect_4.Play();
+                        Exit();
+                    }
                     btnPlay.Update(mouse, effect);
+                    btnExit2.Update(mouse, effect);
                     break;
 
                 case GameState.Playing:
@@ -291,7 +305,9 @@ namespace CleverDolphin
                 case GameState.MainMenu:
                     spriteBatch.Draw(Content.Load<Texture2D>("halamanDepan"), new Rectangle(0, 0, windowWidth, windowHeight), Color.White);
                     btnPlay.Draw(spriteBatch);
+                    btnExit2.Draw(spriteBatch);
                     break;
+
                 case GameState.Playing:
                     sky.Draw(spriteBatch);
                     ocean.Draw(spriteBatch);
@@ -315,6 +331,8 @@ namespace CleverDolphin
                     // spriteBatch.DrawString(score, staminaValue.ToString(), staminaBar, Color.Yellow);
                     spriteBatch.DrawString(number, initialNumber.ToString(), fontNumber, Color.White);
                     spriteBatch.Draw(staminaPict, new Rectangle(50, 2, 190, 47), Color.White);
+                    spriteBatch.Draw(highScorePict, new Rectangle(740, 0, 250, 52), Color.White);
+                    spriteBatch.Draw(ScorePict, new Rectangle(1000, 0, 250, 52), Color.White);
                     staminaGauge.Draw(spriteBatch);
 
                     break;
@@ -599,7 +617,8 @@ namespace CleverDolphin
 
         private void ResetGame()
         {
-            rating = "Newbie";
+            //rating = "Newbie";
+            correctAns = 0;
             tempScore = 0;
             tempSquidSpeed = 7;
             tempCanSpeed = 10;
