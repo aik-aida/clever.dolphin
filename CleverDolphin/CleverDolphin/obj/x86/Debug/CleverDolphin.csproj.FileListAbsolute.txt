@@ -73,7 +73,6 @@ D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\obj\x
 D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.exe
 D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.pdb
-D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\HALAMAN DEPAN copy.xnb
 D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\play.xnb
 D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\play.xnb
 D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\exit.xnb
@@ -116,6 +115,7 @@ D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content
 D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\dolphin.xnb
 D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\CAREFREE AND HAPPY UPBEAT UKULELE INSTRUMENTAL BACKGROUND MUSIC - Mp3 Download (2.70 MB).wma
 D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\halamanDepan.xnb
+<<<<<<< Updated upstream
 E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\play.xnb
 E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\exit.xnb
 E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\playAgain.xnb
@@ -125,3 +125,12 @@ E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game
 E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\BUBBLE.xnb
 E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\dolphin.xnb
 E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\CAREFREE AND HAPPY UPBEAT UKULELE INSTRUMENTAL BACKGROUND MUSIC - Mp3 Download (2.70 MB).wma
+=======
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\halamanDepan.xnb
+>>>>>>> Stashed changes
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\exit (2).xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\playAgain (2).xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\Hans_zimmer_-_Beach_song_[HD_.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\Reaction, Children Sound Effects.xnb
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\Hans_zimmer_-_Beach_song_[HD_.wma
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\Disappointed Cartoon Booing Group Sound Effects.xnb

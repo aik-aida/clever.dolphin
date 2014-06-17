@@ -1,6 +1,6 @@
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphin\CleverDolphinContent\obj\x86\Debug\CleverDolphinContent.contentprojResolveAssemblyReference.cache
 D:\KULIAH\SEMESTER 6\NET\CLONEBARU\CleverDolphin\CleverDolphinContent\obj\x86\Debug\CleverDolphinContent.contentprojResolveAssemblyReference.cache
 E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphinContent\obj\x86\Debug\CleverDolphinContent.contentprojResolveAssemblyReference.cache
-D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphinContent\obj\x86\Debug\CleverDolphinContent.contentprojResolveAssemblyReference.cache
 C:\Users\Asus pc\Documents\Visual Studio 2012\Projects\CleverDolphin\CleverDolphin\CleverDolphinContent\obj\x86\Debug\CleverDolphinContent.contentprojResolveAssemblyReference.cache
 D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphinContent\obj\x86\Debug\CleverDolphinContent.contentprojResolveAssemblyReference.cache
+D:\KULIAH\Semester 6\dot NET\FP\clever.dolphin\CleverDolphin\CleverDolphinContent\obj\x86\Debug\CleverDolphinContent.contentprojResolveAssemblyReference.cache

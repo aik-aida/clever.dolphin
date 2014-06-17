@@ -25,6 +25,7 @@ namespace CleverDolphin
             GameOver
         }
         GameState CurrentGameState = GameState.MainMenu;
+        
 
         Button btnPlay;
         Button btnPlayAgain;
@@ -65,8 +66,8 @@ namespace CleverDolphin
         StaminaGauge staminaGauge;
         Random rand;
 
-        SoundEffect effect, effect_1, effect_2;
-        Song song;
+        SoundEffect effect, effect_1, effect_2, effect_3, effect_4;
+        Song song, song_1;
 
         int tempScore;
         int initialNumber;
@@ -104,13 +105,42 @@ namespace CleverDolphin
             graphics.PreferredBackBufferHeight = windowHeight;
             graphics.PreferredBackBufferWidth = windowWidth;
 
-            // graphics.IsFullScreen = true;
+           //graphics.IsFullScreen = true;
         }
 
         protected override void Initialize()
         {
 
 
+            rand = new Random();
+            initialNumber = rand.Next(1, 10);
+            rating = "Newbie";
+            tempRating = string.Copy(rating);
+            timeSpan = 0;
+            delay = 1;
+            delayColor = 50;
+            stopSpawn = 0;
+            tempSquidSpeed = 7;
+            tempCanSpeed = 10;
+            tempBubbleSpeed = 7;
+            listCumi = new List<Sprite>();
+            listKaleng = new List<Sprite>();
+            prevTimeBubble = TimeSpan.Zero;
+            prevTimeCumi = TimeSpan.Zero;
+            prevTimeKaleng = TimeSpan.Zero;
+            timeAddCumi = TimeSpan.Zero;
+            timeAddBubble = TimeSpan.Zero;
+            timeAddKaleng = TimeSpan.Zero;
+            newTimeBubble = TimeSpan.FromSeconds(4.0);
+            newTimeKaleng = TimeSpan.FromSeconds(0.8);
+            newTimeCumi = TimeSpan.FromSeconds(0.5);
+
+            base.Initialize();
+        }
+
+        public void LoadGame()
+        {
+            ResetGame();
             rand = new Random();
             initialNumber = rand.Next(1, 10);
             rating = "Newbie";
@@ -150,10 +180,10 @@ namespace CleverDolphin
             btnPlay = new Button(Content.Load<Texture2D>("Play"), graphics.GraphicsDevice);
             btnPlay.setPosition(new Vector2(200, 400));
 
-            btnPlayAgain = new Button(Content.Load<Texture2D>("playAgain"), graphics.GraphicsDevice);
+            btnPlayAgain = new Button(Content.Load<Texture2D>("playAgain (2)"), graphics.GraphicsDevice);
             btnPlayAgain.setPosition(new Vector2(200, 400));
 
-            btnExit = new Button(Content.Load<Texture2D>("exit"), graphics.GraphicsDevice);
+            btnExit = new Button(Content.Load<Texture2D>("exit (2)"), graphics.GraphicsDevice);
             btnExit.setPosition(new Vector2(400, 400));
 
             dolphin = new Dolphin(Content.Load<Texture2D>("si lumba lumba"), playerPosition, 140, 240, windowHeight);
@@ -172,7 +202,10 @@ namespace CleverDolphin
             effect = Content.Load<SoundEffect>("button-3");
             effect_1 = Content.Load<SoundEffect>("BUBBLE");
             effect_2 = Content.Load<SoundEffect>("dolphin");
+            effect_3 = Content.Load<SoundEffect>("Reaction, Children Sound Effects");
+            effect_4 = Content.Load<SoundEffect>("Disappointed Cartoon Booing Group Sound Effects");
             song = Content.Load<Song>("CAREFREE AND HAPPY UPBEAT UKULELE INSTRUMENTAL BACKGROUND MUSIC - Mp3 Download (2.70 MB)");
+            song_1 = Content.Load<Song>("Hans_zimmer_-_Beach_song_[HD_");
             MediaPlayer.Play(song);
             MediaPlayer.IsRepeating = true;
 
@@ -203,6 +236,7 @@ namespace CleverDolphin
                     break;
 
                 case GameState.Playing:
+                    
                     dolphin.UpdateMovement(gameTime, effect_1);
                     fontNumber = dolphin.numberPos;
 
@@ -214,19 +248,25 @@ namespace CleverDolphin
 
 
                     if (status == false) CurrentGameState = GameState.GameOver;
+                
 
                     break;
 
                 case GameState.GameOver:
                     if (btnPlayAgain.isClicked == true)
                     {
-                        
+                        effect_3.Play();
+                        LoadGame();
+                        //Initialize();
                         CurrentGameState = GameState.Playing;
-                        ResetGame();
+                        
                         status = true;
                     }
-                    else if (btnExit.isClicked == true) 
+                    else if (btnExit.isClicked == true)
+                    {
+                        effect_4.Play();
                         Exit();
+                    }
                     
                     btnPlayAgain.Update(mouse, effect);
                     btnExit.Update(mouse, effect);
@@ -280,6 +320,9 @@ namespace CleverDolphin
                     break;
 
                 case GameState.GameOver:
+                    //GraphicsDevice.Reset();
+                    
+                    
                     spriteBatch.Draw(Content.Load<Texture2D>("halamanDepan"), new Rectangle(0, 0, windowWidth, windowHeight), Color.White);
                     btnPlayAgain.Draw(spriteBatch);
                     btnExit.Draw(spriteBatch);
@@ -450,7 +493,7 @@ namespace CleverDolphin
                 text3 = tempHighScore;
             }
 
-            if (status == false || tempHighScore > highscores)
+            if (status == false)// || tempHighScore > highscores)
             {
                 var input = text3.ToString();
                 System.IO.File.WriteAllText(path, input);
