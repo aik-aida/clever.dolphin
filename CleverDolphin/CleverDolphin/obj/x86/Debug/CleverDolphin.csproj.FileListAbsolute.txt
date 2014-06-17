@@ -120,3 +120,8 @@ E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game
 E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.exe
 E:\[RESEARCH]\Road to Succes\Semester 6\Framework .NET\Clever Dolphin - The Game\clever.dolphin\CleverDolphin\CleverDolphin\obj\x86\Debug\CleverDolphin.pdb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\CAREFREE AND HAPPY UPBEAT UKULELE INSTRUMENTAL BACKGROUND MUSIC - Mp3 Download (2.70 MB).xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\button-3.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\BUBBLE.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\dolphin.xnb
+D:\KULIAH\SEMESTER 6\NET\clone\CleverDolphin\CleverDolphin\bin\x86\Debug\Content\CAREFREE AND HAPPY UPBEAT UKULELE INSTRUMENTAL BACKGROUND MUSIC - Mp3 Download (2.70 MB).wma

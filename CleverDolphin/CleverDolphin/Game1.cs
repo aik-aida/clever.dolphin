@@ -374,6 +374,7 @@ namespace CleverDolphin
             {
                 var input = text3.ToString();
                 System.IO.File.WriteAllText(path, input);
+                CurrentGameState = GameState.GameOver;
             }
 
 
